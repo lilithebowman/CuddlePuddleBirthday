@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: VoteSkip
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: dc03d25786f28da46be476b08b148a11,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 085a1433835e181429cf633c7e824b85,
     type: 2}
   udonAssembly: 
   assemblyError: 

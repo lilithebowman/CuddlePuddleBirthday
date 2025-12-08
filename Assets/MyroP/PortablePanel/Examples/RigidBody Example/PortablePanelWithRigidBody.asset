@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: PortablePanelWithRigidBody
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 62377e3f7cbf95a46b86a54aec4bd57a,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 708bcc9fed5ceec42933500d6d6df457,
     type: 2}
   udonAssembly: 
   assemblyError: 

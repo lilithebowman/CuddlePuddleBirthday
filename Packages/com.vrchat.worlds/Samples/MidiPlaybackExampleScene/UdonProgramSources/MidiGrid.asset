@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: MidiGrid
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: ee0516f7ec8c8c64b8f2a9dc2b134a46,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 5a2ffe2c88ac76947b0c0867f94f1267,
     type: 2}
   udonAssembly: ".data_start\r\n\r\n    .export grids\r\n    .export channels\r\n   
     .export player\r\n    \r\n    __index_0: %SystemInt32, null\r\n    __condition_0:

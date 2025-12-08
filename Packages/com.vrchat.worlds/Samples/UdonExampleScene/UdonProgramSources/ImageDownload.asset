@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: ImageDownload
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: b20df7d221cf3774f9f803af921e8978,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 162d034e65e8b6047ad283a09f79712c,
     type: 2}
   udonAssembly: ".data_start\r\n\r\n    .export Material\r\n    .export VRCURL\r\n   
     .export TextureInfo\r\n    \r\n    onImageLoadErrorIVRCImageDownload: %VRCSDK3ImageIVRCImageDownload,

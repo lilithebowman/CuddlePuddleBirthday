@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Tether
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: b4958b25e218a7945bb83ac8d25f0d76,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 7295b3a03e1c52545aecffda2d8c62af,
     type: 2}
   udonAssembly: 
   assemblyError: 

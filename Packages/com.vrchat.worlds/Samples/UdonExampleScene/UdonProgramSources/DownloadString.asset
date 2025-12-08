@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: DownloadString
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: b61c99d692aa3784caf05efcc69273aa,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 2e565a55d006e64448be3471a56112c0,
     type: 2}
   udonAssembly: ".data_start\r\n\r\n    .export Url\r\n    .export TextField\r\n   
     \r\n    __url_0: %VRCSDKBaseVRCUrl, null\r\n    __udonBehaviour_0: %VRCUdonUdonBehaviour,

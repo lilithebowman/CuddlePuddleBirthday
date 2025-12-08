@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: AudioReactiveBlendshapes
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: d2ac1c83d61065b4c8f0b73b30e26d4b,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 7c0a7bc6cd1b1824b9392d433f750ec2,
     type: 2}
   udonAssembly: 
   assemblyError: 

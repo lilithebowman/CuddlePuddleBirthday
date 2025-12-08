@@ -1391,7 +1391,7 @@ ReflectionProbe:
   serializedVersion: 2
   m_Type: 0
   m_Mode: 1
-  m_RefreshMode: 1
+  m_RefreshMode: 2
   m_TimeSlicingMode: 1
   m_Resolution: 256
   m_UpdateFrequency: 0
@@ -1404,7 +1404,7 @@ ReflectionProbe:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4426023
   m_IntensityMultiplier: 1
   m_BlendDistance: 1
   m_HDR: 1
@@ -1722,6 +1722,16 @@ PrefabInstance:
       propertyPath: directionalLight
       value: 
       objectReference: {fileID: 1787983410}
+    - target: {fileID: 6451615096903488255, guid: 4a4301b34db5c9d43946e785d9d7bdb1,
+        type: 3}
+      propertyPath: probes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451615096903488255, guid: 4a4301b34db5c9d43946e785d9d7bdb1,
+        type: 3}
+      propertyPath: probes.Array.data[0]
+      value: 
+      objectReference: {fileID: 1337967106}
     - target: {fileID: 6451615096903488255, guid: 4a4301b34db5c9d43946e785d9d7bdb1,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -4542,11 +4552,11 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 145ccf4ef01311a458be36f63440ed10, type: 2}
   - {fileID: 2100000, guid: 04d6fad194ea8b542b67e337d080e740, type: 2}
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 2100000, guid: 7b354ac75661b1e469a0ad2fc1b6f887, type: 2}
   - {fileID: 2100000, guid: 0f19dab2300578b4d87b7662da0e74a4, type: 2}
   - {fileID: 2100000, guid: 8429b93c9834c424ba855fb4288c90aa, type: 2}
   - {fileID: 2100000, guid: e1a6e59d5b7a5f041acf4da9a46e2577, type: 2}
-  - {fileID: 2100000, guid: 5f8052939c9e68a48a6717b85ff18843, type: 2}
+  - {fileID: 2100000, guid: 7b354ac75661b1e469a0ad2fc1b6f887, type: 2}
+  - {fileID: 2100000, guid: c8bf63b851cf9ff44a59aa478919aaef, type: 2}
   LightMapsNear: []
   LightMapsFar: []
   LightMode: 0

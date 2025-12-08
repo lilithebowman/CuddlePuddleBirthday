@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+ <html xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><meta content="en-us" http-equiv="Content-Language" /><meta content="text/html; charset=utf-16" http-equiv="Content-Type" /><title _locID="ConversionReport0">
+          Migration Report
+        </title><style> 
+                    /* Body style, for the entire document */
+                    body
+                    {
+                        background: #F3F3F4;
+                        color: #1E1E1F;
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    /* Header1 style, used for the main title */
+                    h1
+                    {
+                        padding: 10px 0px 10px 10px;
+                        font-size: 21pt;
+                        background-color: #E2E2E2;
+                        border-bottom: 1px #C1C1C2 solid; 
+                        color: #201F20;
+                        margin: 0;
+                        font-weight: normal;
+                    }
+
+                    /* Header2 style, used for "Overview" and other sections */
+                    h2
+                    {
+                        font-size: 18pt;
+                        font-weight: normal;
+                        padding: 15px 0 5px 0;
+                        margin: 0;
+                    }
+
+                    /* Header3 style, used for sub-sections, such as project name */
+                    h3
+                    {
+                        font-weight: normal;
+                        font-size: 15pt;
+                        margin: 0;
+                        padding: 15px 0 5px 0;
+                        background-color: transparent;
+                    }
+
+                    /* Color all hyperlinks one color */
+                    a
+                    {
+                        color: #1382CE;
+                    }
+
+                    /* Table styles */ 
+                    table
+                    {
+                        border-spacing: 0 0;
+                        border-collapse: collapse;
+                        font-size: 10pt;
+                    }
+
+                    table th
+                    {
+                        background: #E7E7E8;
+                        text-align: left;
+                        text-decoration: none;
+                        font-weight: normal;
+                        padding: 3px 6px 3px 6px;
+                    }
+
+                    table td
+                    {
+                        vertical-align: top;
+                        padding: 3px 6px 5px 5px;
+                        margin: 0px;
+                        border: 1px solid #E7E7E8;
+                        background: #F7F7F8;
+                    }
+
+                    /* Local link is a style for hyperlinks that link to file:/// content, there are lots so color them as 'normal' text until the user mouse overs */
+                    .localLink
+                    {
+                        color: #1E1E1F;
+                        background: #EEEEED;
+                        text-decoration: none;
+                    }
+
+                    .localLink:hover
+                    {
+                        color: #1382CE;
+                        background: #FFFF99;
+                        text-decoration: none;
+                    }
+
+                    /* Center text, used in the over views cells that contain message level counts */ 
+                    .textCentered
+                    {
+                        text-align: center;
+                    }
+
+                    /* The message cells in message tables should take up all avaliable space */
+                    .messageCell
+                    {
+                        width: 100%;
+                    }
+
+                    /* Padding around the content after the h1 */ 
+                    #content 
+                    {
+	                    padding: 0px 12px 12px 12px; 
+                    }
+
+                    /* The overview table expands to width, with a max width of 97% */ 
+                    #overview table
+                    {
+                        width: auto;
+                        max-width: 75%; 
+                    }
+
+                    /* The messages tables are always 97% width */
+                    #messages table
+                    {
+                        width: 97%;
+                    }
+
+                    /* All Icons */
+                    .IconSuccessEncoded, .IconInfoEncoded, .IconWarningEncoded, .IconErrorEncoded
+                    {
+                        min-width:18px;
+                        min-height:18px; 
+                        background-repeat:no-repeat;
+                        background-position:center;
+                    }
+
+                    /* Success icon encoded */
+                    .IconSuccessEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconSuccess#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcElEQVR4Xq2TsUsCURzHv15g8ZJcBWlyiYYgCIWcb9DFRRwMW5TA2c0/QEFwFkxxUQdxVlBwCYWOi6IhWgQhBLHJUCkhLr/BW8S7gvrAg+N+v8/v+x68Z8MGy+XSCyABQAXgBgHGALoASkIIDWSLeLBetdHryMjd5IxQPWT4rn1c/P7+xxp72Cs9m5SZ0Bq2vPnbPFafK2zDvmNHypdC0BPkLlQhxJsCAhQoZwdZU5mwxh720qGo8MzTxTTKZDPCx2HoVzp6lz0Q9tKhyx0kGs8Ny+TkWRKk8lCROwEduhyg9l/6lunOPSfmH3NUH6uQ0KHLAe7JYvJjevm+DAMGJHToKtigE+vwvIidxLamb8IBY9e+C5LiXREkfho3TSd06HJA13/oh6T51MTsfQbHrsMynQ5dDihFjiK8JJAU9AKIWTp76dCVN7HWHrajmUEGvyF9nkbAE6gLIS7kTUyuf2gscLoJrElZo/Mvj+nPz/kLTmfnEwP3tB0AAAAASUVORK5CYII=);
+                    }
+
+                    /* Information icon encoded */
+                    .IconInfoEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconInformation#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4Xs2TsUoDQRRF7wwoziokjZUKadInhdhukR9YP8DMX1hYW+QvdsXa/QHBbcXC7W0CamWTQnclFutceIQJwwaWNLlwm5k5d94M76mmaeCrrmsLYOocY12FcxZFUeozCqKqqgYA8uevv1H6VuPxcwlfk5N92KHBxfFeCSAxxswlYAW/Xr989x/mv9gkhtyMDhcAxgzRsp7flj8B/HF1RsMXq+NZMkopaHe7lbKxQUEIGbKsYNoGn969060hZBkQex/W8oRQwsQaW2o3Ago2SVcJUzAgY3N0lTCZZm+zPS8HB51gMmS1DEYyOz9acKO1D8JWTlafKIMxdhvlfdyT94Vv5h7P8Ky7nQzACmhvKq3zk3PjW9asz9D/1oigecsioooAAAAASUVORK5CYII=);
+                    }
+
+                    /* Warning icon encoded */
+                    .IconWarningEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconWarning#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAx0lEQVR4XpWSMQ7CMAxFf4xAyBMLCxMrO8dhaBcuwdCJS3RJBw7SA/QGTCxdWJgiQYWKXJWKIXHIlyw5lqr34tQgEOdcBsCOx5yZK3hCCKdYXneQkh4pEfqzLfu+wVDSyyzFoJjfz9NB+pAF+eizx2Vruts0k15mPgvS6GYvpVtQhB61IB/dk6AF6fS4Ben0uIX5odtFe8Q/eW1KvFeH4e8khT6+gm5B+t3juyDt7n0jpe+CANTd+oTUjN/U3yVaABnSUjFz/gFq44JaVSCXeQAAAABJRU5ErkJggg==);
+                    }
+
+                    /* Error icon encoded */
+                    .IconErrorEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconError#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABQElEQVR4XqWTvUoEQRCE6wYPZUA80AfwAQz23uCMjA7MDRQEIzPBVEyNTQUFIw00vcQTTMzuAh/AxEQQT8HF/3G/oGGnEUGuoNnd6qoZuqltyKEsyzVJq5I6rnUp6SjGeGhESikzzlc1eL7opfuVbrqbU1Zw9NCgtQMaZpY0eNnaaL2fHusvTK5vKu7sjSS1Y4y3QUA6K3e3Mau5UFDyMP7tYF9o8cAHZv68vipoIJg971PZIZ5HiwdvYGGvFVFHmGmZ2MxwmQYPXubPl9Up0tfoMQGetXd6mRbvhBw+boZ6WF7Mbv1+GsHRk0fQmPAH1GfmZirbCfDJ61tw3Px8/8pZsPAG4jlVhcPgZ7adwNWBB68lkRQWFiTgFlbnLY3DGGM7izIJIyT/jjIvEJw6fdJTc6krDzh6aMwMP9bvDH4ADSsa9uSWVJkAAAAASUVORK5CYII=);
+                    }
+                 </style><script type="text/javascript" language="javascript"> 
+          
+            // Startup 
+            // Hook up the the loaded event for the document/window, to linkify the document content
+            var startupFunction = function() { linkifyElement("messages"); };
+            
+            if(window.attachEvent)
+            {
+              window.attachEvent('onload', startupFunction);
+            }
+            else if (window.addEventListener) 
+            {
+              window.addEventListener('load', startupFunction, false);
+            }
+            else 
+            {
+              document.addEventListener('load', startupFunction, false);
+            } 
+            
+            // Toggles the visibility of table rows with the specified name 
+            function toggleTableRowsByName(name)
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  if(!!currentName && currentName.indexOf(name) == 0)
+                  {
+                      var isVisible = allRows[i].style.display == ''; 
+                      isVisible ? allRows[i].style.display = 'none' : allRows[i].style.display = '';
+                  }
+               }
+            }
+            
+            function scrollToFirstVisibleRow(name) 
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  var isVisible = allRows[i].style.display == ''; 
+                  if(!!currentName && currentName.indexOf(name) == 0 && isVisible)
+                  {
+                     allRows[i].scrollIntoView(true); 
+                     return true; 
+                  }
+               }
+               
+               return false;
+            }
+            
+            // Linkifies the specified text content, replaces candidate links with html links 
+            function linkify(text)
+            {
+                 if(!text || 0 === text.length)
+                 {
+                     return text; 
+                 }
+
+                 // Find http, https and ftp links and replace them with hyper links 
+                 var urlLink = /(http|https|ftp)\:\/\/[a-zA-Z0-9\-\.]+(:[a-zA-Z0-9]*)?\/?([a-zA-Z0-9\-\._\?\,\/\\\+&%\$#\=~;\{\}])*/gi;
+                 
+                 return text.replace(urlLink, '<a href="$&">$&</a>') ;
+            }
+            
+            // Linkifies the specified element by ID
+            function linkifyElement(id)
+            {
+                var element = document.getElementById(id);
+                if(!!element)
+                {
+                  element.innerHTML = linkify(element.innerHTML); 
+                }
+            }
+            
+            function ToggleMessageVisibility(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              toggleTableRowsByName("MessageRowClass" + projectName);
+              toggleTableRowsByName('MessageRowHeaderShow' + projectName);
+              toggleTableRowsByName('MessageRowHeaderHide' + projectName); 
+            }
+            
+            function ScrollToFirstVisibleMessage(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              // First try the 'Show messages' row
+              if(!scrollToFirstVisibleRow('MessageRowHeaderShow' + projectName))
+              {
+                // Failed to find a visible row for 'Show messages', try an actual message row 
+                scrollToFirstVisibleRow('MessageRowClass' + projectName); 
+              }
+            }
+           </script></head><body><h1 _locID="ConversionReport">
+          Migration Report - </h1><div id="content"><h2 _locID="OverviewTitle">Overview</h2><div id="overview"><table><tr><th></th><th _locID="ProjectTableHeader">Project</th><th _locID="PathTableHeader">Path</th><th _locID="ErrorsTableHeader">Errors</th><th _locID="WarningsTableHeader">Warnings</th><th _locID="MessagesTableHeader">Messages</th></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#ArchiTech.ProTV.Editor">ArchiTech.ProTV.Editor</a></strong></td><td>ArchiTech.ProTV.Editor.csproj</td><td class="textCentered"><a href="#ArchiTech.ProTV.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#ArchiTech.ProTV.Extras.Editor">ArchiTech.ProTV.Extras.Editor</a></strong></td><td>ArchiTech.ProTV.Extras.Editor.csproj</td><td class="textCentered"><a href="#ArchiTech.ProTV.Extras.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#ArchiTech.ProTV.Extras.Runtime">ArchiTech.ProTV.Extras.Runtime</a></strong></td><td>ArchiTech.ProTV.Extras.Runtime.csproj</td><td class="textCentered"><a href="#ArchiTech.ProTV.Extras.RuntimeError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#ArchiTech.ProTV.Runtime">ArchiTech.ProTV.Runtime</a></strong></td><td>ArchiTech.ProTV.Runtime.csproj</td><td class="textCentered"><a href="#ArchiTech.ProTV.RuntimeError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#ArchiTech.SDK.Editor">ArchiTech.SDK.Editor</a></strong></td><td>ArchiTech.SDK.Editor.csproj</td><td class="textCentered"><a href="#ArchiTech.SDK.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#ArchiTech.SDK.Runtime">ArchiTech.SDK.Runtime</a></strong></td><td>ArchiTech.SDK.Runtime.csproj</td><td class="textCentered"><a href="#ArchiTech.SDK.RuntimeError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#ArchiTech.Umbrella.Editor">ArchiTech.Umbrella.Editor</a></strong></td><td>ArchiTech.Umbrella.Editor.csproj</td><td class="textCentered"><a href="#ArchiTech.Umbrella.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#ArchiTech.Umbrella.Runtime">ArchiTech.Umbrella.Runtime</a></strong></td><td>ArchiTech.Umbrella.Runtime.csproj</td><td class="textCentered"><a href="#ArchiTech.Umbrella.RuntimeError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#ArchiTech.VideoPlayerShim.Editor">ArchiTech.VideoPlayerShim.Editor</a></strong></td><td>ArchiTech.VideoPlayerShim.Editor.csproj</td><td class="textCentered"><a href="#ArchiTech.VideoPlayerShim.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#ArchiTech.VideoPlayerShim.ImportHandler">ArchiTech.VideoPlayerShim.ImportHandler</a></strong></td><td>ArchiTech.VideoPlayerShim.ImportHandler.csproj</td><td class="textCentered"><a href="#ArchiTech.VideoPlayerShim.ImportHandlerError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#ArchiTech.VideoPlayerShim.Runtime">ArchiTech.VideoPlayerShim.Runtime</a></strong></td><td>ArchiTech.VideoPlayerShim.Runtime.csproj</td><td class="textCentered"><a href="#ArchiTech.VideoPlayerShim.RuntimeError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#Assembly-CSharp">Assembly-CSharp</a></strong></td><td>Assembly-CSharp.csproj</td><td class="textCentered"><a href="#Assembly-CSharpError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#Assembly-CSharp-Editor">Assembly-CSharp-Editor</a></strong></td><td>Assembly-CSharp-Editor.csproj</td><td class="textCentered"><a href="#Assembly-CSharp-EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#AudioLink">AudioLink</a></strong></td><td>AudioLink.csproj</td><td class="textCentered"><a href="#AudioLinkError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#AudioLink.Editor">AudioLink.Editor</a></strong></td><td>AudioLink.Editor.csproj</td><td class="textCentered"><a href="#AudioLink.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#AVProVideo.Demos">AVProVideo.Demos</a></strong></td><td>AVProVideo.Demos.csproj</td><td class="textCentered"><a href="#AVProVideo.DemosError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#AVProVideo.Editor">AVProVideo.Editor</a></strong></td><td>AVProVideo.Editor.csproj</td><td class="textCentered"><a href="#AVProVideo.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#AVProVideo.Extensions.Timeline">AVProVideo.Extensions.Timeline</a></strong></td><td>AVProVideo.Extensions.Timeline.csproj</td><td class="textCentered"><a href="#AVProVideo.Extensions.TimelineError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#AVProVideo.Extensions.UnityUI">AVProVideo.Extensions.UnityUI</a></strong></td><td>AVProVideo.Extensions.UnityUI.csproj</td><td class="textCentered"><a href="#AVProVideo.Extensions.UnityUIError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#AVProVideo.Extensions.UnityUI.Editor">AVProVideo.Extensions.UnityUI.Editor</a></strong></td><td>AVProVideo.Extensions.UnityUI.Editor.csproj</td><td class="textCentered"><a href="#AVProVideo.Extensions.UnityUI.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#AVProVideo.Extensions.VisualEffectGraph">AVProVideo.Extensions.VisualEffectGraph</a></strong></td><td>AVProVideo.Extensions.VisualEffectGraph.csproj</td><td class="textCentered"><a href="#AVProVideo.Extensions.VisualEffectGraphError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#AVProVideo.Runtime">AVProVideo.Runtime</a></strong></td><td>AVProVideo.Runtime.csproj</td><td class="textCentered"><a href="#AVProVideo.RuntimeError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#com.vrchat.core.vpm-resolver.Editor">com.vrchat.core.vpm-resolver.Editor</a></strong></td><td>com.vrchat.core.vpm-resolver.Editor.csproj</td><td class="textCentered"><a href="#com.vrchat.core.vpm-resolver.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#UdonSharp.Editor">UdonSharp.Editor</a></strong></td><td>UdonSharp.Editor.csproj</td><td class="textCentered"><a href="#UdonSharp.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#UdonSharp.Lib">UdonSharp.Lib</a></strong></td><td>UdonSharp.Lib.csproj</td><td class="textCentered"><a href="#UdonSharp.LibError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#UdonSharp.Runtime">UdonSharp.Runtime</a></strong></td><td>UdonSharp.Runtime.csproj</td><td class="textCentered"><a href="#UdonSharp.RuntimeError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#UdonSunControllerRuntime">UdonSunControllerRuntime</a></strong></td><td>UdonSunControllerRuntime.csproj</td><td class="textCentered"><a href="#UdonSunControllerRuntimeError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#UniTask">UniTask</a></strong></td><td>UniTask.csproj</td><td class="textCentered"><a href="#UniTaskError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#UniTask.Addressables">UniTask.Addressables</a></strong></td><td>UniTask.Addressables.csproj</td><td class="textCentered"><a href="#UniTask.AddressablesError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#UniTask.DOTween">UniTask.DOTween</a></strong></td><td>UniTask.DOTween.csproj</td><td class="textCentered"><a href="#UniTask.DOTweenError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#UniTask.Editor">UniTask.Editor</a></strong></td><td>UniTask.Editor.csproj</td><td class="textCentered"><a href="#UniTask.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#UniTask.Linq">UniTask.Linq</a></strong></td><td>UniTask.Linq.csproj</td><td class="textCentered"><a href="#UniTask.LinqError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#UniTask.TextMeshPro">UniTask.TextMeshPro</a></strong></td><td>UniTask.TextMeshPro.csproj</td><td class="textCentered"><a href="#UniTask.TextMeshProError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#UnityEditorTests">UnityEditorTests</a></strong></td><td>UnityEditorTests.csproj</td><td class="textCentered"><a href="#UnityEditorTestsError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#VRC.ClientSim">VRC.ClientSim</a></strong></td><td>VRC.ClientSim.csproj</td><td class="textCentered"><a href="#VRC.ClientSimError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#VRC.ClientSim.Editor">VRC.ClientSim.Editor</a></strong></td><td>VRC.ClientSim.Editor.csproj</td><td class="textCentered"><a href="#VRC.ClientSim.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#VRC.ExampleCentral.Editor">VRC.ExampleCentral.Editor</a></strong></td><td>VRC.ExampleCentral.Editor.csproj</td><td class="textCentered"><a href="#VRC.ExampleCentral.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#VRC.SDK3">VRC.SDK3</a></strong></td><td>VRC.SDK3.csproj</td><td class="textCentered"><a href="#VRC.SDK3Error">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#VRC.SDK3.Editor">VRC.SDK3.Editor</a></strong></td><td>VRC.SDK3.Editor.csproj</td><td class="textCentered"><a href="#VRC.SDK3.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#VRC.SDKBase">VRC.SDKBase</a></strong></td><td>VRC.SDKBase.csproj</td><td class="textCentered"><a href="#VRC.SDKBaseError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#VRC.SDKBase.Editor">VRC.SDKBase.Editor</a></strong></td><td>VRC.SDKBase.Editor.csproj</td><td class="textCentered"><a href="#VRC.SDKBase.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#VRC.SDKBase.Editor.BuildPipeline">VRC.SDKBase.Editor.BuildPipeline</a></strong></td><td>VRC.SDKBase.Editor.BuildPipeline.csproj</td><td class="textCentered"><a href="#VRC.SDKBase.Editor.BuildPipelineError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#VRC.SDKBase.Editor.ShaderStripping">VRC.SDKBase.Editor.ShaderStripping</a></strong></td><td>VRC.SDKBase.Editor.ShaderStripping.csproj</td><td class="textCentered"><a href="#VRC.SDKBase.Editor.ShaderStrippingError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#VRC.Udon">VRC.Udon</a></strong></td><td>VRC.Udon.csproj</td><td class="textCentered"><a href="#VRC.UdonError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#VRC.Udon.Editor">VRC.Udon.Editor</a></strong></td><td>VRC.Udon.Editor.csproj</td><td class="textCentered"><a href="#VRC.Udon.EditorError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#VRC.Udon.Serialization.OdinSerializer">VRC.Udon.Serialization.OdinSerializer</a></strong></td><td>VRC.Udon.Serialization.OdinSerializer.csproj</td><td class="textCentered"><a href="#VRC.Udon.Serialization.OdinSerializerError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#Solution"><span _locID="OverviewSolutionSpan">Solution</span></a></strong></td><td>CuddlePuddleBirthday.sln</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('Solution'); return false;">1</a></td></tr></table></div><h2 _locID="SolutionAndProjectsTitle">Solution and projects</h2><div id="messages"><a name="ArchiTech.ProTV.Editor" /><h3>ArchiTech.ProTV.Editor</h3><table><tr id="ArchiTech.ProTV.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassArchiTech.ProTV.Editor"><td class="IconErrorEncoded"><a name="ArchiTech.ProTV.EditorError" /></td><td class="messageCell"><strong>ArchiTech.ProTV.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="ArchiTech.ProTV.Extras.Editor" /><h3>ArchiTech.ProTV.Extras.Editor</h3><table><tr id="ArchiTech.ProTV.Extras.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassArchiTech.ProTV.Extras.Editor"><td class="IconErrorEncoded"><a name="ArchiTech.ProTV.Extras.EditorError" /></td><td class="messageCell"><strong>ArchiTech.ProTV.Extras.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="ArchiTech.ProTV.Extras.Runtime" /><h3>ArchiTech.ProTV.Extras.Runtime</h3><table><tr id="ArchiTech.ProTV.Extras.RuntimeHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassArchiTech.ProTV.Extras.Runtime"><td class="IconErrorEncoded"><a name="ArchiTech.ProTV.Extras.RuntimeError" /></td><td class="messageCell"><strong>ArchiTech.ProTV.Extras.Runtime.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="ArchiTech.ProTV.Runtime" /><h3>ArchiTech.ProTV.Runtime</h3><table><tr id="ArchiTech.ProTV.RuntimeHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassArchiTech.ProTV.Runtime"><td class="IconErrorEncoded"><a name="ArchiTech.ProTV.RuntimeError" /></td><td class="messageCell"><strong>ArchiTech.ProTV.Runtime.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="ArchiTech.SDK.Editor" /><h3>ArchiTech.SDK.Editor</h3><table><tr id="ArchiTech.SDK.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassArchiTech.SDK.Editor"><td class="IconErrorEncoded"><a name="ArchiTech.SDK.EditorError" /></td><td class="messageCell"><strong>ArchiTech.SDK.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="ArchiTech.SDK.Runtime" /><h3>ArchiTech.SDK.Runtime</h3><table><tr id="ArchiTech.SDK.RuntimeHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassArchiTech.SDK.Runtime"><td class="IconErrorEncoded"><a name="ArchiTech.SDK.RuntimeError" /></td><td class="messageCell"><strong>ArchiTech.SDK.Runtime.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="ArchiTech.Umbrella.Editor" /><h3>ArchiTech.Umbrella.Editor</h3><table><tr id="ArchiTech.Umbrella.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassArchiTech.Umbrella.Editor"><td class="IconErrorEncoded"><a name="ArchiTech.Umbrella.EditorError" /></td><td class="messageCell"><strong>ArchiTech.Umbrella.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="ArchiTech.Umbrella.Runtime" /><h3>ArchiTech.Umbrella.Runtime</h3><table><tr id="ArchiTech.Umbrella.RuntimeHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassArchiTech.Umbrella.Runtime"><td class="IconErrorEncoded"><a name="ArchiTech.Umbrella.RuntimeError" /></td><td class="messageCell"><strong>ArchiTech.Umbrella.Runtime.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="ArchiTech.VideoPlayerShim.Editor" /><h3>ArchiTech.VideoPlayerShim.Editor</h3><table><tr id="ArchiTech.VideoPlayerShim.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassArchiTech.VideoPlayerShim.Editor"><td class="IconErrorEncoded"><a name="ArchiTech.VideoPlayerShim.EditorError" /></td><td class="messageCell"><strong>ArchiTech.VideoPlayerShim.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="ArchiTech.VideoPlayerShim.ImportHandler" /><h3>ArchiTech.VideoPlayerShim.ImportHandler</h3><table><tr id="ArchiTech.VideoPlayerShim.ImportHandlerHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassArchiTech.VideoPlayerShim.ImportHandler"><td class="IconErrorEncoded"><a name="ArchiTech.VideoPlayerShim.ImportHandlerError" /></td><td class="messageCell"><strong>ArchiTech.VideoPlayerShim.ImportHandler.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="ArchiTech.VideoPlayerShim.Runtime" /><h3>ArchiTech.VideoPlayerShim.Runtime</h3><table><tr id="ArchiTech.VideoPlayerShim.RuntimeHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassArchiTech.VideoPlayerShim.Runtime"><td class="IconErrorEncoded"><a name="ArchiTech.VideoPlayerShim.RuntimeError" /></td><td class="messageCell"><strong>ArchiTech.VideoPlayerShim.Runtime.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="Assembly-CSharp" /><h3>Assembly-CSharp</h3><table><tr id="Assembly-CSharpHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassAssembly-CSharp"><td class="IconErrorEncoded"><a name="Assembly-CSharpError" /></td><td class="messageCell"><strong>Assembly-CSharp.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="Assembly-CSharp-Editor" /><h3>Assembly-CSharp-Editor</h3><table><tr id="Assembly-CSharp-EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassAssembly-CSharp-Editor"><td class="IconErrorEncoded"><a name="Assembly-CSharp-EditorError" /></td><td class="messageCell"><strong>Assembly-CSharp-Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="AudioLink" /><h3>AudioLink</h3><table><tr id="AudioLinkHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassAudioLink"><td class="IconErrorEncoded"><a name="AudioLinkError" /></td><td class="messageCell"><strong>AudioLink.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="AudioLink.Editor" /><h3>AudioLink.Editor</h3><table><tr id="AudioLink.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassAudioLink.Editor"><td class="IconErrorEncoded"><a name="AudioLink.EditorError" /></td><td class="messageCell"><strong>AudioLink.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="AVProVideo.Demos" /><h3>AVProVideo.Demos</h3><table><tr id="AVProVideo.DemosHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassAVProVideo.Demos"><td class="IconErrorEncoded"><a name="AVProVideo.DemosError" /></td><td class="messageCell"><strong>AVProVideo.Demos.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="AVProVideo.Editor" /><h3>AVProVideo.Editor</h3><table><tr id="AVProVideo.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassAVProVideo.Editor"><td class="IconErrorEncoded"><a name="AVProVideo.EditorError" /></td><td class="messageCell"><strong>AVProVideo.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="AVProVideo.Extensions.Timeline" /><h3>AVProVideo.Extensions.Timeline</h3><table><tr id="AVProVideo.Extensions.TimelineHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassAVProVideo.Extensions.Timeline"><td class="IconErrorEncoded"><a name="AVProVideo.Extensions.TimelineError" /></td><td class="messageCell"><strong>AVProVideo.Extensions.Timeline.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="AVProVideo.Extensions.UnityUI" /><h3>AVProVideo.Extensions.UnityUI</h3><table><tr id="AVProVideo.Extensions.UnityUIHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassAVProVideo.Extensions.UnityUI"><td class="IconErrorEncoded"><a name="AVProVideo.Extensions.UnityUIError" /></td><td class="messageCell"><strong>AVProVideo.Extensions.UnityUI.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="AVProVideo.Extensions.UnityUI.Editor" /><h3>AVProVideo.Extensions.UnityUI.Editor</h3><table><tr id="AVProVideo.Extensions.UnityUI.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassAVProVideo.Extensions.UnityUI.Editor"><td class="IconErrorEncoded"><a name="AVProVideo.Extensions.UnityUI.EditorError" /></td><td class="messageCell"><strong>AVProVideo.Extensions.UnityUI.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="AVProVideo.Extensions.VisualEffectGraph" /><h3>AVProVideo.Extensions.VisualEffectGraph</h3><table><tr id="AVProVideo.Extensions.VisualEffectGraphHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassAVProVideo.Extensions.VisualEffectGraph"><td class="IconErrorEncoded"><a name="AVProVideo.Extensions.VisualEffectGraphError" /></td><td class="messageCell"><strong>AVProVideo.Extensions.VisualEffectGraph.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="AVProVideo.Runtime" /><h3>AVProVideo.Runtime</h3><table><tr id="AVProVideo.RuntimeHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassAVProVideo.Runtime"><td class="IconErrorEncoded"><a name="AVProVideo.RuntimeError" /></td><td class="messageCell"><strong>AVProVideo.Runtime.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="com.vrchat.core.vpm-resolver.Editor" /><h3>com.vrchat.core.vpm-resolver.Editor</h3><table><tr id="com.vrchat.core.vpm-resolver.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClasscom.vrchat.core.vpm-resolver.Editor"><td class="IconErrorEncoded"><a name="com.vrchat.core.vpm-resolver.EditorError" /></td><td class="messageCell"><strong>com.vrchat.core.vpm-resolver.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="UdonSharp.Editor" /><h3>UdonSharp.Editor</h3><table><tr id="UdonSharp.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassUdonSharp.Editor"><td class="IconErrorEncoded"><a name="UdonSharp.EditorError" /></td><td class="messageCell"><strong>UdonSharp.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="UdonSharp.Lib" /><h3>UdonSharp.Lib</h3><table><tr id="UdonSharp.LibHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassUdonSharp.Lib"><td class="IconErrorEncoded"><a name="UdonSharp.LibError" /></td><td class="messageCell"><strong>UdonSharp.Lib.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="UdonSharp.Runtime" /><h3>UdonSharp.Runtime</h3><table><tr id="UdonSharp.RuntimeHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassUdonSharp.Runtime"><td class="IconErrorEncoded"><a name="UdonSharp.RuntimeError" /></td><td class="messageCell"><strong>UdonSharp.Runtime.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="UdonSunControllerRuntime" /><h3>UdonSunControllerRuntime</h3><table><tr id="UdonSunControllerRuntimeHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassUdonSunControllerRuntime"><td class="IconErrorEncoded"><a name="UdonSunControllerRuntimeError" /></td><td class="messageCell"><strong>UdonSunControllerRuntime.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="UniTask" /><h3>UniTask</h3><table><tr id="UniTaskHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassUniTask"><td class="IconErrorEncoded"><a name="UniTaskError" /></td><td class="messageCell"><strong>UniTask.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="UniTask.Addressables" /><h3>UniTask.Addressables</h3><table><tr id="UniTask.AddressablesHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassUniTask.Addressables"><td class="IconErrorEncoded"><a name="UniTask.AddressablesError" /></td><td class="messageCell"><strong>UniTask.Addressables.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="UniTask.DOTween" /><h3>UniTask.DOTween</h3><table><tr id="UniTask.DOTweenHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassUniTask.DOTween"><td class="IconErrorEncoded"><a name="UniTask.DOTweenError" /></td><td class="messageCell"><strong>UniTask.DOTween.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="UniTask.Editor" /><h3>UniTask.Editor</h3><table><tr id="UniTask.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassUniTask.Editor"><td class="IconErrorEncoded"><a name="UniTask.EditorError" /></td><td class="messageCell"><strong>UniTask.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="UniTask.Linq" /><h3>UniTask.Linq</h3><table><tr id="UniTask.LinqHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassUniTask.Linq"><td class="IconErrorEncoded"><a name="UniTask.LinqError" /></td><td class="messageCell"><strong>UniTask.Linq.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="UniTask.TextMeshPro" /><h3>UniTask.TextMeshPro</h3><table><tr id="UniTask.TextMeshProHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassUniTask.TextMeshPro"><td class="IconErrorEncoded"><a name="UniTask.TextMeshProError" /></td><td class="messageCell"><strong>UniTask.TextMeshPro.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="UnityEditorTests" /><h3>UnityEditorTests</h3><table><tr id="UnityEditorTestsHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassUnityEditorTests"><td class="IconErrorEncoded"><a name="UnityEditorTestsError" /></td><td class="messageCell"><strong>UnityEditorTests.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="VRC.ClientSim" /><h3>VRC.ClientSim</h3><table><tr id="VRC.ClientSimHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassVRC.ClientSim"><td class="IconErrorEncoded"><a name="VRC.ClientSimError" /></td><td class="messageCell"><strong>VRC.ClientSim.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="VRC.ClientSim.Editor" /><h3>VRC.ClientSim.Editor</h3><table><tr id="VRC.ClientSim.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassVRC.ClientSim.Editor"><td class="IconErrorEncoded"><a name="VRC.ClientSim.EditorError" /></td><td class="messageCell"><strong>VRC.ClientSim.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="VRC.ExampleCentral.Editor" /><h3>VRC.ExampleCentral.Editor</h3><table><tr id="VRC.ExampleCentral.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassVRC.ExampleCentral.Editor"><td class="IconErrorEncoded"><a name="VRC.ExampleCentral.EditorError" /></td><td class="messageCell"><strong>VRC.ExampleCentral.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="VRC.SDK3" /><h3>VRC.SDK3</h3><table><tr id="VRC.SDK3HeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassVRC.SDK3"><td class="IconErrorEncoded"><a name="VRC.SDK3Error" /></td><td class="messageCell"><strong>VRC.SDK3.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="VRC.SDK3.Editor" /><h3>VRC.SDK3.Editor</h3><table><tr id="VRC.SDK3.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassVRC.SDK3.Editor"><td class="IconErrorEncoded"><a name="VRC.SDK3.EditorError" /></td><td class="messageCell"><strong>VRC.SDK3.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="VRC.SDKBase" /><h3>VRC.SDKBase</h3><table><tr id="VRC.SDKBaseHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassVRC.SDKBase"><td class="IconErrorEncoded"><a name="VRC.SDKBaseError" /></td><td class="messageCell"><strong>VRC.SDKBase.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="VRC.SDKBase.Editor" /><h3>VRC.SDKBase.Editor</h3><table><tr id="VRC.SDKBase.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassVRC.SDKBase.Editor"><td class="IconErrorEncoded"><a name="VRC.SDKBase.EditorError" /></td><td class="messageCell"><strong>VRC.SDKBase.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="VRC.SDKBase.Editor.BuildPipeline" /><h3>VRC.SDKBase.Editor.BuildPipeline</h3><table><tr id="VRC.SDKBase.Editor.BuildPipelineHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassVRC.SDKBase.Editor.BuildPipeline"><td class="IconErrorEncoded"><a name="VRC.SDKBase.Editor.BuildPipelineError" /></td><td class="messageCell"><strong>VRC.SDKBase.Editor.BuildPipeline.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="VRC.SDKBase.Editor.ShaderStripping" /><h3>VRC.SDKBase.Editor.ShaderStripping</h3><table><tr id="VRC.SDKBase.Editor.ShaderStrippingHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassVRC.SDKBase.Editor.ShaderStripping"><td class="IconErrorEncoded"><a name="VRC.SDKBase.Editor.ShaderStrippingError" /></td><td class="messageCell"><strong>VRC.SDKBase.Editor.ShaderStripping.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="VRC.Udon" /><h3>VRC.Udon</h3><table><tr id="VRC.UdonHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassVRC.Udon"><td class="IconErrorEncoded"><a name="VRC.UdonError" /></td><td class="messageCell"><strong>VRC.Udon.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="VRC.Udon.Editor" /><h3>VRC.Udon.Editor</h3><table><tr id="VRC.Udon.EditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassVRC.Udon.Editor"><td class="IconErrorEncoded"><a name="VRC.Udon.EditorError" /></td><td class="messageCell"><strong>VRC.Udon.Editor.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="VRC.Udon.Serialization.OdinSerializer" /><h3>VRC.Udon.Serialization.OdinSerializer</h3><table><tr id="VRC.Udon.Serialization.OdinSerializerHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassVRC.Udon.Serialization.OdinSerializer"><td class="IconErrorEncoded"><a name="VRC.Udon.Serialization.OdinSerializerError" /></td><td class="messageCell"><strong>VRC.Udon.Serialization.OdinSerializer.csproj:
+        </strong><span>The application which this project type is based on was not found. Please try this link for further information: http://go.microsoft.com/fwlink/?LinkID=299083&amp;projecttype=E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1</span></td></tr></table><a name="Solution" /><h3 _locID="ProjectDisplayNameHeader">Solution</h3><table><tr id="SolutionHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="MessageRowHeaderShowSolution"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="SolutionMessage" onclick="ToggleMessageVisibility('Solution'); return false;">
+          Show 1 additional messages
+        </a></td></tr><tr name="MessageRowClassSolution" style="display: none"><td class="IconInfoEncoded"><a name="SolutionMessage" /></td><td class="messageCell"><strong>CuddlePuddleBirthday.sln:
+        </strong><span>The solution file does not require migration.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideSolution"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="SolutionMessage" onclick="ToggleMessageVisibility('Solution'); return false;">
+          Hide 1 additional messages
+        </a></td></tr></table></div></div></body></html>

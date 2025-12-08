@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: atlas_riskiplayer_ui
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 166eb7732b0483045b28ce98c159bb66, type: 3}
+    - {fileID: 2800000, guid: cefd101b9f0607341ad341e6f943d531, type: 3}
+    - {fileID: 2800000, guid: 38c6f96f037ceab49a1862d9df05bf35, type: 3}
+    - {fileID: 2800000, guid: 2e770eb7fde325548bf15dea94681504, type: 3}
+    - {fileID: 2800000, guid: 062a26ce01cb86642a4a5e558355d208, type: 3}
+    - {fileID: 2800000, guid: bae40aa052ac7ed479e6d3444c2e5a75, type: 3}
+    - {fileID: 2800000, guid: b123dd9c318d33c469f08575ed5d0101, type: 3}
+    - {fileID: 2800000, guid: 6bc7e0a262694e44897a825c0053381b, type: 3}
+    - {fileID: 2800000, guid: aba612f742b6fd54bad52ffb4cd44f99, type: 3}
+    - {fileID: 2800000, guid: 1865c207b2306504c8c60e586c806d8f, type: 3}
+    - {fileID: 2800000, guid: 204c1e1b3fbe954418e636e2cfbab563, type: 3}
+    - {fileID: 2800000, guid: d26a5d7f84a7ab54c937b98e631663a1, type: 3}
+    - {fileID: 2800000, guid: 0b57367304e0c224fab0e9eef953ee44, type: 3}
+    - {fileID: 2800000, guid: 2a2f709a85fb9604cb69ee3540c9d618, type: 3}
+    - {fileID: 2800000, guid: eb116d1688b9cac4fb160c69bd6e9690, type: 3}
+    - {fileID: 2800000, guid: f38720712d4203445b9299201385df2d, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - bae40aa052ac7ed479e6d3444c2e5a75: 21300000
+    - f38720712d4203445b9299201385df2d: 21300000
+    - 6bc7e0a262694e44897a825c0053381b: 21300000
+    - 0b57367304e0c224fab0e9eef953ee44: 21300000
+    - 166eb7732b0483045b28ce98c159bb66: 21300000
+    - eb116d1688b9cac4fb160c69bd6e9690: 21300000
+    - 1865c207b2306504c8c60e586c806d8f: 21300000
+    - 2e770eb7fde325548bf15dea94681504: 21300000
+    - aba612f742b6fd54bad52ffb4cd44f99: 21300000
+    - 2a2f709a85fb9604cb69ee3540c9d618: 21300000
+    - cefd101b9f0607341ad341e6f943d531: 21300000
+    - 204c1e1b3fbe954418e636e2cfbab563: 21300000
+    - b123dd9c318d33c469f08575ed5d0101: 21300000
+    - 062a26ce01cb86642a4a5e558355d208: 21300000
+    - 38c6f96f037ceab49a1862d9df05bf35: 21300000
+    - d26a5d7f84a7ab54c937b98e631663a1: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: bae40aa052ac7ed479e6d3444c2e5a75, type: 3}
+  - {fileID: 21300000, guid: f38720712d4203445b9299201385df2d, type: 3}
+  - {fileID: 21300000, guid: 6bc7e0a262694e44897a825c0053381b, type: 3}
+  - {fileID: 21300000, guid: 0b57367304e0c224fab0e9eef953ee44, type: 3}
+  - {fileID: 21300000, guid: 166eb7732b0483045b28ce98c159bb66, type: 3}
+  - {fileID: 21300000, guid: eb116d1688b9cac4fb160c69bd6e9690, type: 3}
+  - {fileID: 21300000, guid: 1865c207b2306504c8c60e586c806d8f, type: 3}
+  - {fileID: 21300000, guid: 2e770eb7fde325548bf15dea94681504, type: 3}
+  - {fileID: 21300000, guid: aba612f742b6fd54bad52ffb4cd44f99, type: 3}
+  - {fileID: 21300000, guid: 2a2f709a85fb9604cb69ee3540c9d618, type: 3}
+  - {fileID: 21300000, guid: cefd101b9f0607341ad341e6f943d531, type: 3}
+  - {fileID: 21300000, guid: 204c1e1b3fbe954418e636e2cfbab563, type: 3}
+  - {fileID: 21300000, guid: b123dd9c318d33c469f08575ed5d0101, type: 3}
+  - {fileID: 21300000, guid: 062a26ce01cb86642a4a5e558355d208, type: 3}
+  - {fileID: 21300000, guid: 38c6f96f037ceab49a1862d9df05bf35, type: 3}
+  - {fileID: 21300000, guid: d26a5d7f84a7ab54c937b98e631663a1, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - play
+  - wheel
+  - repeat 1
+  - vol high
+  - add lock
+  - vol off
+  - resync
+  - lock
+  - repeat
+  - vol low
+  - add
+  - stop
+  - reload
+  - pause
+  - load
+  - unlock
+  m_RenderDataMap: {}
+  m_Tag: atlas_riskiplayer_ui
+  m_IsVariant: 0

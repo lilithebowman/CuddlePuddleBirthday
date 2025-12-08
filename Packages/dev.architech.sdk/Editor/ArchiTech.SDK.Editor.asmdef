@@ -1,0 +1,35 @@
+{
+    "name": "ArchiTech.SDK.Editor",
+    "references": [
+        "VRC.Udon",
+        "VRC.Udon.Editor",
+        "UdonSharp.Runtime",
+        "UdonSharp.Editor",
+        "Unity.TextMeshPro",
+        "Unity.TextMeshPro.Editor",
+        "ArchiTech.SDK.Runtime",
+        "Varneon.VUdon.Logger.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.varneon.vudon.logger",
+            "expression": "0.3.0",
+            "define": "VUDON_LOGGER"
+        },
+        {
+            "name": "com.vrchat.worlds",
+            "expression": "3.0.0",
+            "define": "VRC_SDK_VRCSDK3"
+        }
+    ],
+    "noEngineReferences": false
+}

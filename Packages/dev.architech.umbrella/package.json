@@ -1,0 +1,17 @@
+{
+    "name": "dev.architech.umbrella",
+    "version": "0.9.0",
+    "displayName": "ArchiTech.Umbrella",
+    "description": "A library of gimmicks, mechanics and tools that improves interactivity of worlds.",
+    "unity": "2019.4",
+    "unityRelease": "31f1",
+    "hideInEditor": false,
+    "vpmDependencies": {
+        "com.vrchat.worlds": "^3.3",
+        "dev.architech.sdk": ">=0.22.0"
+    },
+    "author": {
+        "name": "ArchiTechVR",
+        "email": "archi@techanon.dev"
+    }
+}

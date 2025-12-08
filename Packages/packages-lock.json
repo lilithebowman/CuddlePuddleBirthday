@@ -6,6 +6,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "com.nekometer.esnya.udon-sun-controller": {
+      "version": "file:com.nekometer.esnya.udon-sun-controller",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.ai.navigation": {
       "version": "1.1.5",
       "depth": 1,
@@ -222,6 +228,18 @@
         "com.unity.inputsystem": "1.2.0",
         "com.unity.ai.navigation": "1.1.5"
       }
+    },
+    "dev.architech.protv": {
+      "version": "file:dev.architech.protv",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "dev.architech.protv.extras": {
+      "version": "file:dev.architech.protv.extras",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
     },
     "dev.architech.sdk": {
       "version": "file:dev.architech.sdk",

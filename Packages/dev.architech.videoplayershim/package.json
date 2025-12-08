@@ -1,0 +1,29 @@
+{
+  "name": "dev.architech.videoplayershim",
+  "version": "1.5.0",
+  "displayName": "ArchiTech.VideoPlayerShim",
+  "description": "An out-of-the-box utility for enabling both UnityVideo and AVProVideo playback in-editor for the VRChat SDK.",
+  "url": "",
+  "unity": "2019.4",
+  "unityRelease": "31f1",
+  "vpmDependencies": {
+    "com.vrchat.worlds": "^3.3"
+  },
+  "legacyFolders": {
+    "Assets\\ArchiTech\\VideoPlayerShim": "e24998e4ae4c4761b42513fe1142a7c5"
+  },
+  "legacyFiles": {
+  },
+  "keywords": [
+    "video player",
+    "unity",
+    "avpro",
+    "utility"
+  ],
+  "author": {
+    "name": "ArchiTechVR",
+    "email": "archi@techanon.dev"
+  },
+  "samples": [
+  ]
+}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: RTGIUpdater
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 34f6927ce21f5e84e9580edf5eb1886a,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 27a4efacc4dccdb45baec2baea6a57ad,
     type: 2}
   udonAssembly: 
   assemblyError: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: UiShapeFixes
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 1509a5577bb92f84f96461cf49d41125,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 6b2535edb3bdbc14eb903eabe3390d81,
     type: 2}
   udonAssembly: 
   assemblyError: 

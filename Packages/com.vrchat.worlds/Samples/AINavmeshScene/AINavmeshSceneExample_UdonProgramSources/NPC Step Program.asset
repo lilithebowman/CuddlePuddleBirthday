@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: NPC Step Program
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 8ff8b32f021e7f34d81f8493a82aee8b,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: cc1f7094c14eb6b4cadf922db5e0896c,
     type: 2}
   udonAssembly: ".data_start\r\n\r\n    .export rigidbody\r\n    .export pickup\r\n   
     .export surface\r\n    \r\n    __instance_0: %UnityEngineRigidbody, null\r\n   

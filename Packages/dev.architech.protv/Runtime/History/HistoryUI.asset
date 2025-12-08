@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: HistoryUI
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 9f354606b59c53445b6b0308bc3dab2e,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: c1d602136773a1c4c98f1a3acbd4479b,
     type: 2}
   udonAssembly: 
   assemblyError: 

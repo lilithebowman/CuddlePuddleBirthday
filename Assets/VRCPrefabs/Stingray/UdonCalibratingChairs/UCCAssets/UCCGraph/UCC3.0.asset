@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: UCC3.0
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 9bf3c6104be5f2c498c9a997d89e89bc,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: bbb87891f13ff2d49b389e9527efdd6b,
     type: 2}
   udonAssembly: ".data_start\r\n\r\n    .export KneeTarget\r\n    .export KneePosition\r\n   
     .export SeatedPosition\r\n    \r\n    __instance_0: %VRCUdonUdonBehaviour, this\r\n   

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: SkyboxSwapper
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: c5e6e47f9655bc446a586358d3e6e078,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 6c3148bbe1858a940a5cbd6af171a89b,
     type: 2}
   udonAssembly: 
   assemblyError: 

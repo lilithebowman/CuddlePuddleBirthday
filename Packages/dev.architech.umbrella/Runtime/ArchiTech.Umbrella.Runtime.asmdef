@@ -1,0 +1,21 @@
+{
+    "name": "ArchiTech.Umbrella.Runtime",
+    "references": [
+        "Unity.TextMeshPro",
+        "Unity.TextMeshPro.Editor",
+        "UdonSharp.Runtime",
+        "VRC.Udon",
+        "ArchiTech.SDK.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "VRCSDKBase.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

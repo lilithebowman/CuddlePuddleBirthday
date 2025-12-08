@@ -1,0 +1,43 @@
+{
+    "name": "ArchiTech.ProTV.Runtime",
+    "rootNamespace": "ArchiTech.ProTV",
+    "references": [
+        "VRC.Udon",
+        "UdonSharp.Runtime",
+        "Unity.TextMeshPro",
+        "ArchiTech.SDK.Runtime",
+        "AudioLink",
+        "Varneon.VUdon.Logger.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "VRCSDKBase.dll",
+        "VRCSDK3.dll",
+        "VRC.Udon.Common.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UDONSHARP"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.llealloo.audiolink",
+            "expression": "[0.3.0,1.0.0)",
+            "define": "AUDIOLINK_0"
+        },
+        {
+            "name": "com.llealloo.audiolink",
+            "expression": "1.0.0",
+            "define": "AUDIOLINK_1"
+        },
+        {
+            "name": "com.vrchat.worlds",
+            "expression": "3.8.1",
+            "define": "VRC_NETWORK_PARAMETERS"
+        }
+    ],
+    "noEngineReferences": false
+}

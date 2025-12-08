@@ -1,0 +1,33 @@
+{
+    "name": "ArchiTech.VideoPlayerShim.ImportHandler",
+    "references": [
+        "AVProVideo.Runtime",
+        "AVProVideo.Editor",
+        "VRC.SDKBase.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "VRCSDKBase.dll",
+        "VRCSDK3.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.vrchat.core.vpm-resolver",
+            "expression": "0.1.27",
+            "define": "VPM_RESOLVER"
+        },
+        {
+            "name": "com.vrchat.core.vpm-resolver",
+            "expression": "1.0.0",
+            "define": "VPM_RESOLVER"
+        }
+    ],
+    "noEngineReferences": false
+}

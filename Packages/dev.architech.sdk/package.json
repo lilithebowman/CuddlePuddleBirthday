@@ -1,0 +1,15 @@
+{
+  "name": "dev.architech.sdk",
+  "version": "0.22.0",
+  "displayName": "ArchiTech.SDK",
+  "description": "Library of common functionality used across all of the ArchiTech assets.",
+  "unity": "2019.4",
+  "unityRelease": "31f1",
+  "vpmDependencies": {
+    "com.vrchat.worlds": "^3.4"
+  },
+  "author": {
+    "name": "ArchiTechVR",
+    "email": "archi@techanon.dev"
+  }
+}

@@ -1,0 +1,58 @@
+{
+    "name": "ArchiTech.ProTV.Editor",
+    "rootNamespace": "ArchiTech.ProTV.Editor",
+    "references": [
+        "VRC.Udon",
+        "VRC.Udon.Editor",
+        "com.vrchat.core.vpm-resolver.Editor",
+        "UdonSharp.Runtime",
+        "UdonSharp.Editor",
+        "Unity.TextMeshPro",
+        "Unity.TextMeshPro.Editor",
+        "ArchiTech.SDK.Runtime",
+        "ArchiTech.SDK.Editor",
+        "ArchiTech.ProTV.Runtime",
+        "AudioLink",
+        "AudioLink.Editor",
+        "Varneon.VUdon.Logger.Runtime",
+        "at.pimaker.ltcgi.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "VRCSDKBase.dll",
+        "VRCSDK3.dll",
+        "VRC.Udon.Common.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UDONSHARP"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.llealloo.audiolink",
+            "expression": "[0.3.0,1.0.0)",
+            "define": "AUDIOLINK_0"
+        },
+        {
+            "name": "com.llealloo.audiolink",
+            "expression": "1.0.0",
+            "define": "AUDIOLINK_1"
+        },
+        {
+            "name": "at.pimaker.ltcgi",
+            "expression": "[1.4.0,2.0.0)",
+            "define": "LTCGI_1"
+        },
+        {
+            "name": "com.vrchat.core.vpm-resolver",
+            "expression": "[0.1.27,1.0.0)",
+            "define": "VPM_RESOLVER"
+        }
+    ],
+    "noEngineReferences": false
+}

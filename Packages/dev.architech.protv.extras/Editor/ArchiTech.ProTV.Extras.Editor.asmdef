@@ -1,0 +1,45 @@
+{
+    "name": "ArchiTech.ProTV.Extras.Editor",
+    "rootNamespace": "ArchiTech.ProTV.Extras.Editor",
+    "references": [
+        "VRC.Udon",
+        "VRC.Udon.Editor",
+        "UdonSharp.Runtime",
+        "UdonSharp.Editor",
+        "Unity.TextMeshPro",
+        "Unity.TextMeshPro.Editor",
+        "ArchiTech.SDK.Runtime",
+        "ArchiTech.SDK.Editor",
+        "ArchiTech.ProTV.Runtime",
+        "ArchiTech.ProTV.Extras.Runtime",
+        "ArchiTech.ProTV.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "VRCSDKBase.dll",
+        "VRCSDK3.dll",
+        "VRC.Udon.Common.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UDONSHARP"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.llealloo.audiolink",
+            "expression": "0.3.2",
+            "define": "AUDIOLINK_BETA"
+        },
+        {
+            "name": "com.llealloo.audiolink",
+            "expression": "1.0.0",
+            "define": "AUDIOLINK_STABLE"
+        }
+    ],
+    "noEngineReferences": false
+}

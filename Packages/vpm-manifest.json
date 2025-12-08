@@ -17,6 +17,12 @@
     },
     "dev.architech.videoplayershim": {
       "version": "1.5.0"
+    },
+    "dev.architech.protv": {
+      "version": "3.0.0-beta.29.4"
+    },
+    "dev.architech.protv.extras": {
+      "version": "0.9.3-beta"
     }
   },
   "locked": {
@@ -55,6 +61,19 @@
       "version": "1.5.0",
       "dependencies": {
         "com.vrchat.worlds": "^3.3"
+      }
+    },
+    "dev.architech.protv": {
+      "version": "3.0.0-beta.29.4",
+      "dependencies": {
+        "com.vrchat.worlds": "^3.4",
+        "dev.architech.sdk": ">=0.21.3 <1"
+      }
+    },
+    "dev.architech.protv.extras": {
+      "version": "0.9.3-beta",
+      "dependencies": {
+        "dev.architech.protv": ">=3.0.0-beta.24.1"
       }
     }
   }

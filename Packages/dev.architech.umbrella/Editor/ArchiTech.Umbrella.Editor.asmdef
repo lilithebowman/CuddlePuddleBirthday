@@ -1,0 +1,25 @@
+{
+    "name": "ArchiTech.Umbrella.Editor",
+    "references": [
+        "Unity.TextMeshPro",
+        "Unity.TextMeshPro.Editor",
+        "UdonSharp.Runtime",
+        "UdonSharp.Editor",
+        "VRC.Udon",
+        "VRC.Udon.Editor",
+        "ArchiTech.SDK.Runtime",
+        "ArchiTech.SDK.Editor",
+        "ArchiTech.Umbrella.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

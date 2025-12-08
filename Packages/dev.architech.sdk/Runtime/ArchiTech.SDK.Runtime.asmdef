@@ -1,0 +1,27 @@
+{
+    "name": "ArchiTech.SDK.Runtime",
+    "references": [
+        "UdonSharp.Runtime",
+        "VRC.Udon",
+        "Unity.TextMeshPro",
+        "Unity.TextMeshPro.Editor",
+        "Varneon.VUdon.Logger.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "VRCSDKBase.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.varneon.vudon.logger",
+            "expression": "0.3.0",
+            "define": "VUDON_LOGGER"
+        }
+    ],
+    "noEngineReferences": false
+}

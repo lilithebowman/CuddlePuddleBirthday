@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: atlas_twinretro
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 2
+      generateMipMaps: 1
+      readable: 1
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 48
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 0c35300bddfabda4f8974c273fe64dd7, type: 3}
+    - {fileID: 2800000, guid: 7ee84ff9ea20e0447b4781347dc649af, type: 3}
+    - {fileID: 2800000, guid: 5b28b76e4fb17df4dbe86a32c84726d0, type: 3}
+    - {fileID: 2800000, guid: 1b4a3669524bebe4d9a6725e514ba23b, type: 3}
+    - {fileID: 2800000, guid: 240b9787050cd0241ac3ff4fe6ef6ef2, type: 3}
+    - {fileID: 2800000, guid: 280a74a14dc770e4ebdab9d8d4bc1503, type: 3}
+    - {fileID: 2800000, guid: 618308a8f06079d4387fa48bbe2cb238, type: 3}
+    - {fileID: 2800000, guid: 15170c8b35fd8b944b4d73fef3cc3b6f, type: 3}
+    - {fileID: 2800000, guid: 3ce88ebfe54b7c240b03654c438a8525, type: 3}
+    - {fileID: 2800000, guid: 02f3679b0fb71f34981214055bd0b440, type: 3}
+    - {fileID: 2800000, guid: 23a9c776c010aab4da9e7815167886cb, type: 3}
+    - {fileID: 2800000, guid: aff8a4a26375b5b488eb3e9dcf82972d, type: 3}
+    - {fileID: 2800000, guid: ec7e998b6883b5145a2e4d27f010a732, type: 3}
+    - {fileID: 2800000, guid: 28828ed947df90d4593c17ba56320297, type: 3}
+    - {fileID: 2800000, guid: 6694fd36617e92d449aeca0f0513ef54, type: 3}
+    - {fileID: 2800000, guid: 8db806a6b6cf61d4d96f2d6f1d3d325f, type: 3}
+    - {fileID: 2800000, guid: df61b25d1784ce94da32d9bb729fd3ab, type: 3}
+    - {fileID: 2800000, guid: 4b3a4f41b98d15e44be124193a12841d, type: 3}
+    - {fileID: 2800000, guid: 958584503f021684e95319fee763647e, type: 3}
+    - {fileID: 2800000, guid: 121784bd50263f9478c15760dc36b8e6, type: 3}
+    - {fileID: 2800000, guid: 43b8293831cc24547a6feae9c090b2d6, type: 3}
+    - {fileID: 2800000, guid: dfe55a92344ba3b4a88869e90b3ce931, type: 3}
+    - {fileID: 2800000, guid: 18ef19c93e16cfa4c91f9905fcc7a647, type: 3}
+    - {fileID: 2800000, guid: a167a73d677ccc8489fd52b9530ff35f, type: 3}
+    - {fileID: 2800000, guid: 53a2bbb879b61a74ab011d6e6829b772, type: 3}
+    - {fileID: 2800000, guid: 054c95d49cfec1746b9c7fba2ffb15e3, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 958584503f021684e95319fee763647e: 21300000
+    - 4b3a4f41b98d15e44be124193a12841d: 21300000
+    - 280a74a14dc770e4ebdab9d8d4bc1503: 21300000
+    - dfe55a92344ba3b4a88869e90b3ce931: 21300000
+    - aff8a4a26375b5b488eb3e9dcf82972d: 21300000
+    - 054c95d49cfec1746b9c7fba2ffb15e3: 21300000
+    - 6694fd36617e92d449aeca0f0513ef54: 21300000
+    - 23a9c776c010aab4da9e7815167886cb: 21300000
+    - 8db806a6b6cf61d4d96f2d6f1d3d325f: 21300000
+    - 240b9787050cd0241ac3ff4fe6ef6ef2: 21300000
+    - 43b8293831cc24547a6feae9c090b2d6: 21300000
+    - 618308a8f06079d4387fa48bbe2cb238: 21300000
+    - 53a2bbb879b61a74ab011d6e6829b772: 21300000
+    - 1b4a3669524bebe4d9a6725e514ba23b: 21300000
+    - 18ef19c93e16cfa4c91f9905fcc7a647: 21300000
+    - 28828ed947df90d4593c17ba56320297: 21300000
+    - 7ee84ff9ea20e0447b4781347dc649af: 21300000
+    - 0c35300bddfabda4f8974c273fe64dd7: 21300000
+    - ec7e998b6883b5145a2e4d27f010a732: 21300000
+    - 15170c8b35fd8b944b4d73fef3cc3b6f: 21300000
+    - 02f3679b0fb71f34981214055bd0b440: 21300000
+    - a167a73d677ccc8489fd52b9530ff35f: 21300000
+    - df61b25d1784ce94da32d9bb729fd3ab: 21300000
+    - 121784bd50263f9478c15760dc36b8e6: 21300000
+    - 5b28b76e4fb17df4dbe86a32c84726d0: 21300000
+    - 3ce88ebfe54b7c240b03654c438a8525: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 958584503f021684e95319fee763647e, type: 3}
+  - {fileID: 21300000, guid: 4b3a4f41b98d15e44be124193a12841d, type: 3}
+  - {fileID: 21300000, guid: 280a74a14dc770e4ebdab9d8d4bc1503, type: 3}
+  - {fileID: 21300000, guid: dfe55a92344ba3b4a88869e90b3ce931, type: 3}
+  - {fileID: 21300000, guid: aff8a4a26375b5b488eb3e9dcf82972d, type: 3}
+  - {fileID: 21300000, guid: 054c95d49cfec1746b9c7fba2ffb15e3, type: 3}
+  - {fileID: 21300000, guid: 6694fd36617e92d449aeca0f0513ef54, type: 3}
+  - {fileID: 21300000, guid: 23a9c776c010aab4da9e7815167886cb, type: 3}
+  - {fileID: 21300000, guid: 8db806a6b6cf61d4d96f2d6f1d3d325f, type: 3}
+  - {fileID: 21300000, guid: 240b9787050cd0241ac3ff4fe6ef6ef2, type: 3}
+  - {fileID: 21300000, guid: 43b8293831cc24547a6feae9c090b2d6, type: 3}
+  - {fileID: 21300000, guid: 618308a8f06079d4387fa48bbe2cb238, type: 3}
+  - {fileID: 21300000, guid: 53a2bbb879b61a74ab011d6e6829b772, type: 3}
+  - {fileID: 21300000, guid: 1b4a3669524bebe4d9a6725e514ba23b, type: 3}
+  - {fileID: 21300000, guid: 18ef19c93e16cfa4c91f9905fcc7a647, type: 3}
+  - {fileID: 21300000, guid: 28828ed947df90d4593c17ba56320297, type: 3}
+  - {fileID: 21300000, guid: 7ee84ff9ea20e0447b4781347dc649af, type: 3}
+  - {fileID: 21300000, guid: 0c35300bddfabda4f8974c273fe64dd7, type: 3}
+  - {fileID: 21300000, guid: ec7e998b6883b5145a2e4d27f010a732, type: 3}
+  - {fileID: 21300000, guid: 15170c8b35fd8b944b4d73fef3cc3b6f, type: 3}
+  - {fileID: 21300000, guid: 02f3679b0fb71f34981214055bd0b440, type: 3}
+  - {fileID: 21300000, guid: a167a73d677ccc8489fd52b9530ff35f, type: 3}
+  - {fileID: 21300000, guid: df61b25d1784ce94da32d9bb729fd3ab, type: 3}
+  - {fileID: 21300000, guid: 121784bd50263f9478c15760dc36b8e6, type: 3}
+  - {fileID: 21300000, guid: 5b28b76e4fb17df4dbe86a32c84726d0, type: 3}
+  - {fileID: 21300000, guid: 3ce88ebfe54b7c240b03654c438a8525, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - twinretro_stop
+  - twinretro_slider_bg
+  - twinretro_checkmark
+  - twinretro_trash
+  - twinretro_mute
+  - twinretro_volumemid
+  - twinretro_plus
+  - twinretro_minus
+  - twinretro_reload
+  - twinretro_button_pushed
+  - twinretro_thumb
+  - twinretro_headphones
+  - twinretro_volumelow
+  - twinretro_button_lit
+  - twinretro_unlock
+  - twinretro_play
+  - twinretro_bgtile
+  - twinretro_arrow
+  - twinretro_pause
+  - twinretro_inputbg
+  - twinretro_lock
+  - twinretro_volumehigh
+  - twinretro_slider
+  - twinretro_sync
+  - twinretro_button
+  - twinretro_loading
+  m_RenderDataMap: {}
+  m_Tag: atlas_twinretro
+  m_IsVariant: 0

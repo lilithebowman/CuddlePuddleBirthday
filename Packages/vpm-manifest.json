@@ -1,0 +1,61 @@
+{
+  "dependencies": {
+    "com.vrchat.core.vpm-resolver": {
+      "version": "0.1.29"
+    },
+    "com.vrchat.worlds": {
+      "version": "3.10.1"
+    },
+    "com.llealloo.audiolink": {
+      "version": "2.1.0"
+    },
+    "dev.architech.sdk": {
+      "version": "0.22.0"
+    },
+    "dev.architech.umbrella": {
+      "version": "0.9.0"
+    },
+    "dev.architech.videoplayershim": {
+      "version": "1.5.0"
+    }
+  },
+  "locked": {
+    "com.vrchat.core.vpm-resolver": {
+      "version": "0.1.29",
+      "dependencies": {}
+    },
+    "com.vrchat.worlds": {
+      "version": "3.10.1",
+      "dependencies": {
+        "com.vrchat.base": "3.10.1"
+      }
+    },
+    "com.vrchat.base": {
+      "version": "3.10.1",
+      "dependencies": {}
+    },
+    "com.llealloo.audiolink": {
+      "version": "2.1.0",
+      "dependencies": {}
+    },
+    "dev.architech.sdk": {
+      "version": "0.22.0",
+      "dependencies": {
+        "com.vrchat.worlds": "^3.4"
+      }
+    },
+    "dev.architech.umbrella": {
+      "version": "0.9.0",
+      "dependencies": {
+        "com.vrchat.worlds": "^3.3",
+        "dev.architech.sdk": ">=0.22.0"
+      }
+    },
+    "dev.architech.videoplayershim": {
+      "version": "1.5.0",
+      "dependencies": {
+        "com.vrchat.worlds": "^3.3"
+      }
+    }
+  }
+}

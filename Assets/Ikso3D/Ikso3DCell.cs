@@ -14,5 +14,9 @@ public class Ikso3DCell : UdonSharpBehaviour
         {
             board.ClickCell(cellIndex, playerColorIndex);
         }
+        else
+        {
+            Debug.LogError("Ikso3DBoard not wired!!!");
+        }
     }
 }

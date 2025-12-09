@@ -5,31 +5,25 @@ using VRC.Udon;
 
 public class Ikso3DBoard : UdonSharpBehaviour
 {
-    [Header("Cell renderers in index order 0..26")]
-    public Renderer[] cellRenderers;   // drag I3DP0..26 here
+    public Renderer[] cellRenderers;
+    public Material matBlankSphere;
+    public Material[] playerMaterials;
 
-    [Header("Materials")]
-    public Material matBlankSphere;    // transparent
-    public Material[] playerMaterials; // size 9: Red..Pink (0..8)
-
-    // -1 = empty, 0..8 = player color index
     [UdonSynced] private int[] cellColors = new int[27];
+
+    private const int EMPTY = -1;
 
     private void Start()
     {
-        // Ensure initial state is empty when world loads
+        // On first run, all entries are 0 – treat that as "uninitialized" and make them blank
         for (int i = 0; i < cellColors.Length; i++)
         {
-            if (cellColors[i] == 0 && cellRenderers[i].sharedMaterial == null)
+            if (cellColors[i] == 0)
             {
-                // First load case, force empty
-                cellColors[i] = -1;
+                cellColors[i] = EMPTY;
             }
 
-            if (cellColors[i] == -1)
-            {
-                ApplyCellVisual(i);
-            }
+            ApplyCellVisual(i);
         }
     }
 
@@ -42,23 +36,26 @@ public class Ikso3DBoard : UdonSharpBehaviour
         }
     }
 
-    // Called by pointers when they click a cell
     public void ClickCell(int cellIndex, int playerColorIndex)
     {
         if (cellIndex < 0 || cellIndex >= cellColors.Length) return;
         if (playerColorIndex < 0 || playerColorIndex >= playerMaterials.Length) return;
 
+        // Make sure the person clicking actually becomes owner before changing synced data
+        if (!Networking.IsOwner(gameObject))
+        {
+            Networking.SetOwner(Networking.LocalPlayer, gameObject);
+        }
+
         int current = cellColors[cellIndex];
 
-        // If empty -> claim it
-        if (current == -1)
+        if (current == EMPTY)
         {
             cellColors[cellIndex] = playerColorIndex;
         }
-        // If already mine -> clear it
         else if (current == playerColorIndex)
         {
-            cellColors[cellIndex] = -1;
+            cellColors[cellIndex] = EMPTY;
         }
         else
         {
@@ -72,9 +69,14 @@ public class Ikso3DBoard : UdonSharpBehaviour
 
     public void ResetBoard()
     {
+        if (!Networking.IsOwner(gameObject))
+        {
+            Networking.SetOwner(Networking.LocalPlayer, gameObject);
+        }
+
         for (int i = 0; i < cellColors.Length; i++)
         {
-            cellColors[i] = -1;
+            cellColors[i] = EMPTY;
             ApplyCellVisual(i);
         }
 
@@ -88,7 +90,7 @@ public class Ikso3DBoard : UdonSharpBehaviour
 
         int colorIndex = cellColors[index];
 
-        if (colorIndex == -1)
+        if (colorIndex == EMPTY)
         {
             r.sharedMaterial = matBlankSphere;
         }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: TVManagerV2ManualSync
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 4b1de274d5e26da4192c70942c5d2ffb,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 9a182ecf1660ef9468d032ab2058fcc2,
     type: 2}
   udonAssembly: 
   assemblyError: 

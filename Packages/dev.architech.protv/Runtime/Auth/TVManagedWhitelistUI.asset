@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: TVManagedWhitelistUI
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: a77b6c5c6a98ecd4193ab6f0ae482a38,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 9029552225ee7d14db549854304a43eb,
     type: 2}
   udonAssembly: 
   assemblyError: 

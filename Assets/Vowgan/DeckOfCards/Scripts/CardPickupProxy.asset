@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: CardPickupProxy
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 596a6616e1d0c8243b2fdaa9b17eb539,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 14887719f1a58da458f07e29858006e9,
     type: 2}
   udonAssembly: 
   assemblyError: 

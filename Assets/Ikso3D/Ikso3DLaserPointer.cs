@@ -15,6 +15,9 @@ public class Ikso3DLaserPointer : UdonSharpBehaviour
     [Header("Visuals (optional)")]
     public LineRenderer lineRenderer;   // to draw laser beam
     public Color beamColor = Color.white;
+    
+    [Header("UI / Blocking Objects")]
+		public Transform tabletRoot;
 
     private VRC_Pickup pickup;
     private Ikso3DCell currentHoverCell;
@@ -60,13 +63,46 @@ public class Ikso3DLaserPointer : UdonSharpBehaviour
             rayStart = head.position;
             rayDir   = head.rotation * Vector3.forward;
         }
+				
+				Ray ray = new Ray(rayStart, rayDir);
+				RaycastHit hit;
+				
+				// FIRST: Raycast ALL LAYERS to detect tablet
+				bool hitUI = Physics.Raycast(
+						ray,
+						out hit,
+						maxDistance,
+						~0,   // everything
+						QueryTriggerInteraction.Collide
+				);
 
-        Ray ray = new Ray(rayStart, rayDir);
-        RaycastHit hit;
-        bool hitSomething = Physics.Raycast(ray, out hit, maxDistance, cellLayerMask, QueryTriggerInteraction.Collide);
+				if (hitUI && tabletRoot != null && hit.collider.transform.IsChildOf(tabletRoot))
+				{
+						// We hit the tablet — block ALL interaction
+						currentHoverCell = null;
 
+						if (lineRenderer != null && local.IsUserInVR())
+						{
+								// OPTIONAL: still draw laser to UI hit point
+								lineRenderer.enabled = true;
+								lineRenderer.SetPosition(0, rayOrigin.position);
+								lineRenderer.SetPosition(1, hit.point);
+						}
+
+						return;
+				}
+				
+				// SECOND: Real Ikso3D collision check
+				bool hitCells = Physics.Raycast(
+						ray,
+						out hit,
+						maxDistance,
+						cellLayerMask,
+						QueryTriggerInteraction.Collide
+				);
+				
         // --- Hover logic ---
-        if (hitSomething)
+        if (hitCells)
         {
 						lastColliderName = hit.collider.name;
             Ikso3DCell cell = hit.collider.GetComponentInParent<Ikso3DCell>();
@@ -77,7 +113,7 @@ public class Ikso3DLaserPointer : UdonSharpBehaviour
 						lastColliderName = "null";
             currentHoverCell = null;
         }
-
+				
         // --- Line renderer visuals ---
         if (lineRenderer != null)
         {
@@ -87,7 +123,7 @@ public class Ikso3DLaserPointer : UdonSharpBehaviour
                 lineRenderer.enabled = true;
                 lineRenderer.SetPosition(0, rayOrigin.position);
                 lineRenderer.SetPosition(1,
-                    hitSomething ? hit.point : rayOrigin.position + rayOrigin.forward * maxDistance);
+                    hitCells ? hit.point : rayOrigin.position + rayOrigin.forward * maxDistance);
             }
             else
             {

@@ -12,6 +12,9 @@ public class Ikso3DBoard : UdonSharpBehaviour
     [UdonSynced] private int[] cellColors = new int[27];
 
     private const int EMPTY = -1;
+    
+    private float _lastSyncTime;
+    [SerializeField] private float _minSyncInterval = 0.1f; // 10 times per second max
 
     private void Start()
     {
@@ -36,6 +39,16 @@ public class Ikso3DBoard : UdonSharpBehaviour
         }
     }
 
+    private void SyncBoard()
+    {
+        float t = Time.time;
+        if (t - _lastSyncTime >= _minSyncInterval)
+        {
+            _lastSyncTime = t;
+            RequestSerialization();
+        }
+    }
+    
     public void ClickCell(int cellIndex, int playerColorIndex)
     {
         if (cellIndex < 0 || cellIndex >= cellColors.Length) return;
@@ -64,7 +77,7 @@ public class Ikso3DBoard : UdonSharpBehaviour
         }
 
         ApplyCellVisual(cellIndex);
-        RequestSerialization();
+        SyncBoard();
     }
 
     public void ResetBoard()
@@ -80,7 +93,7 @@ public class Ikso3DBoard : UdonSharpBehaviour
             ApplyCellVisual(i);
         }
 
-        RequestSerialization();
+        SyncBoard();
     }
 
     private void ApplyCellVisual(int index)

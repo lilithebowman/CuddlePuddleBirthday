@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Ikso3DResetButton
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 7e2f35a837a8afb458e1d31cf48d4d29,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 0b535c4e209580c48ab704426d63311c,
     type: 2}
   udonAssembly: 
   assemblyError: 

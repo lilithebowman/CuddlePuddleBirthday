@@ -16,52 +16,92 @@ public class Ikso3DBoard : UdonSharpBehaviour
 
     private const int EMPTY = -1;
 
-    // Simple sync throttle to avoid clogging VRChat's manual sync
-    [SerializeField] private float _minSyncInterval = 0.1f; // seconds
-    private float _lastSyncTime;
-    private string lastSyncReason;
-
     private void Start()
     {
-        // Local init: treat everything as empty until we receive real data via OnDeserialization.
-        // This runs on every client, but remote data will override shortly after join.
-        if (cellColors == null || cellColors.Length != cellRenderers.Length)
+        // Ensure array matches renderer count
+        if (cellRenderers == null)
         {
-            cellColors = new int[cellRenderers.Length];
+            return;
         }
 
-        for (int i = 0; i < cellColors.Length; i++)
+        int cellCount = cellRenderers.Length;
+
+        if (cellColors == null || cellColors.Length != cellCount)
         {
-            cellColors[i] = EMPTY;
-            ApplyCellVisual(i);
+            cellColors = new int[cellCount];
         }
+
+        // If we are the owner and everything is still default 0,
+        // treat this as uninitialized and set to EMPTY, then sync.
+        VRCPlayerApi local = Networking.LocalPlayer;
+        if (local != null && Networking.IsOwner(gameObject))
+        {
+            bool allZero = true;
+            for (int i = 0; i < cellColors.Length; i++)
+            {
+                if (cellColors[i] != 0)
+                {
+                    allZero = false;
+                    break;
+                }
+            }
+
+            if (allZero)
+            {
+                for (int i = 0; i < cellColors.Length; i++)
+                {
+                    cellColors[i] = EMPTY;
+                }
+                RequestSerialization();
+            }
+        }
+
+        // Apply visuals based on current cellColors
+        ApplyAllCellVisuals();
     }
 
     public override void OnDeserialization()
     {
-        // When network data arrives, just redraw based on synced cellColors
-        if (cellColors == null || cellRenderers == null) return;
-
-        int len = Mathf.Min(cellColors.Length, cellRenderers.Length);
-        for (int i = 0; i < len; i++)
-        {
-            ApplyCellVisual(i);
-        }
+        // When network data arrives, redraw based on synced cellColors
+        ApplyAllCellVisuals();
     }
 
     public void ClickCell(int cellIndex, int playerColorIndex)
     {
-        if (cellColors == null || cellRenderers == null) return;
-        if (cellIndex < 0 || cellIndex >= cellColors.Length) return;
-        if (playerColorIndex < 0 || playerColorIndex >= playerMaterials.Length) return;
+        if (cellRenderers == null || cellColors == null)
+        {
+            return;
+        }
+
+        if (cellIndex < 0 || cellIndex >= cellColors.Length)
+        {
+            return;
+        }
+
+        if (playerColorIndex < 0 || playerMaterials == null || playerColorIndex >= playerMaterials.Length)
+        {
+            return;
+        }
+
+        VRCPlayerApi local = Networking.LocalPlayer;
+        if (local == null)
+        {
+            return;
+        }
+
+        // Take ownership of the board so our changes replicate
+        if (!Networking.IsOwner(gameObject))
+        {
+            Networking.SetOwner(local, gameObject);
+        }
 
         int current = cellColors[cellIndex];
         int newValue = current;
 
-        // RULES:
-        // empty      -> becomes this pointer's color
-        // own color  -> becomes empty
-        // other color -> no-op (can't overwrite)
+        // Rules:
+        // EMPTY        -> becomes this pointer's color
+        // own color    -> becomes EMPTY
+        // other color  -> no-op (can't overwrite)
         if (current == EMPTY)
         {
             newValue = playerColorIndex;
@@ -72,41 +112,33 @@ public class Ikso3DBoard : UdonSharpBehaviour
         }
         else
         {
-            // Trying to paint over someone else's piece: do absolutely nothing,
-            // including NO ownership change and NO RequestSerialization.
-            // This avoids unnecessary network spam.
-            // Debug.Log($"[Ikso3DBoard] Ignored overwrite attempt on cell {cellIndex}");
+            // Do nothing if trying to overwrite someone else's color
             return;
         }
 
         if (newValue == current)
         {
-            // Nothing changed after logic; just bail.
             return;
         }
 
-        // Apply local change
         cellColors[cellIndex] = newValue;
         ApplyCellVisual(cellIndex);
 
-        // Take ownership only when a REAL change occurs
-        VRCPlayerApi local = Networking.LocalPlayer;
-        if (local != null && !Networking.IsOwner(gameObject))
-        {
-            Networking.SetOwner(local, gameObject);
-        }
-
-        SyncBoard("ClickCell");
+        RequestSerialization();
     }
 
     public void ResetBoard()
     {
-        if (cellColors == null || cellRenderers == null) return;
-
-        for (int i = 0; i < cellColors.Length; i++)
+        if (cellRenderers == null)
         {
-            cellColors[i] = EMPTY;
-            ApplyCellVisual(i);
+            return;
+        }
+
+        int cellCount = cellRenderers.Length;
+
+        if (cellColors == null || cellColors.Length != cellCount)
+        {
+            cellColors = new int[cellCount];
         }
 
         VRCPlayerApi local = Networking.LocalPlayer;
@@ -115,41 +147,58 @@ public class Ikso3DBoard : UdonSharpBehaviour
             Networking.SetOwner(local, gameObject);
         }
 
-        SyncBoard("ResetBoard");
+        for (int i = 0; i < cellColors.Length; i++)
+        {
+            cellColors[i] = EMPTY;
+        }
+
+        ApplyAllCellVisuals();
+
+        RequestSerialization();
     }
 
-    private void SyncBoard(string reason)
+    private void ApplyAllCellVisuals()
     {
-        float t = Time.time;
-        if (t - _lastSyncTime < _minSyncInterval)
+        if (cellRenderers == null || cellColors == null)
         {
-            lastSyncReason = "THROTTLED: " + reason;
             return;
         }
 
-        _lastSyncTime = t;
-        lastSyncReason = reason;
-        RequestSerialization();
-        // Debug.Log($"[Ikso3DBoard] SyncBoard: {reason} at {t}");
+        int len = Mathf.Min(cellRenderers.Length, cellColors.Length);
+        for (int i = 0; i < len; i++)
+        {
+            ApplyCellVisual(i);
+        }
     }
 
     private void ApplyCellVisual(int index)
     {
-        if (cellRenderers == null || index < 0 || index >= cellRenderers.Length) return;
+        if (cellRenderers == null || index < 0 || index >= cellRenderers.Length)
+        {
+            return;
+        }
 
         Renderer r = cellRenderers[index];
-        if (r == null) return;
+        if (r == null)
+        {
+            return;
+        }
 
         int colorIndex = cellColors[index];
 
         if (colorIndex == EMPTY)
         {
-            r.sharedMaterial = matBlankSphere;
+            if (matBlankSphere != null)
+            {
+                r.sharedMaterial = matBlankSphere;
+            }
         }
-        else if (colorIndex >= 0 && colorIndex < playerMaterials.Length)
+        else if (playerMaterials != null &&
+                 colorIndex >= 0 &&
+                 colorIndex < playerMaterials.Length &&
+                 playerMaterials[colorIndex] != null)
         {
             r.sharedMaterial = playerMaterials[colorIndex];
         }
-        // else: invalid color index -> leave as-is
     }
 }

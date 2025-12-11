@@ -10,18 +10,16 @@ public class Ikso3DLaserPointer : UdonSharpBehaviour
     public int playerColorIndex;        // 0..8, matching materials
     public Transform rayOrigin;         // where the laser shoots from
     public float maxDistance = 10f;
-    public LayerMask cellLayerMask;     // set to Ikso3DCells / Walkthrough layer
+    public LayerMask cellLayerMask;     // layer of the I3DP# objects
 
     [Header("Visuals (optional)")]
     public LineRenderer lineRenderer;   // to draw laser beam
     public Color beamColor = Color.white;
-    
+
     [Header("UI / Blocking Objects")]
-    public Transform tabletRoot;        // Root of MyroP's tablet (drag in Inspector)
+    public Transform tabletRoot;        // Root of MyroP's tablet (drag here)
 
     private VRC_Pickup pickup;
-    private Ikso3DCell currentHoverCell; // kept for possible future hover effects
-    private string lastColliderName;
 
     private void Start()
     {
@@ -39,80 +37,53 @@ public class Ikso3DLaserPointer : UdonSharpBehaviour
     {
         VRCPlayerApi local = Networking.LocalPlayer;
 
-        // Only update visuals when held by local player
+        // Only draw laser when held by local player
         if (pickup == null || local == null || pickup.currentPlayer != local)
         {
-            currentHoverCell = null;
             if (lineRenderer != null)
+            {
                 lineRenderer.enabled = false;
+            }
             return;
         }
 
-        // Desktop / Mobile: no beam (to avoid reticle/beam mismatch)
+        // Only show beam in VR to avoid mismatch with desktop reticle
         if (!local.IsUserInVR())
         {
-            currentHoverCell = null;
             if (lineRenderer != null)
+            {
                 lineRenderer.enabled = false;
+            }
             return;
         }
 
-        // --- VR beam from gun tip ---
-        Vector3 rayStart = rayOrigin.position;
-        Vector3 rayDir   = rayOrigin.forward;
+        if (rayOrigin == null)
+        {
+            if (lineRenderer != null)
+            {
+                lineRenderer.enabled = false;
+            }
+            return;
+        }
 
-        Ray ray = new Ray(rayStart, rayDir);
+        Vector3 origin = rayOrigin.position;
+        Vector3 dir = rayOrigin.forward;
+
+        Ray ray = new Ray(origin, dir);
         RaycastHit hit;
 
-        // First: raycast against ALL layers to find what is visually in front (tablet, walls, etc.)
-        bool hitUI = Physics.Raycast(
-            ray,
-            out hit,
-            maxDistance,
-            ~0,   // everything
-            QueryTriggerInteraction.Collide
-        );
+        Vector3 endPoint = origin + dir * maxDistance;
 
-        Vector3 endPoint = rayStart + rayDir * maxDistance;
-
-        if (hitUI)
+        // Raycast against everything to get a visual hit point
+        if (Physics.Raycast(ray, out hit, maxDistance, ~0, QueryTriggerInteraction.Collide))
         {
             endPoint = hit.point;
-
-            // If we hit the tablet, we still draw the beam to it, but don't treat it as a cell
-            if (tabletRoot != null && hit.collider.transform.IsChildOf(tabletRoot))
-            {
-                currentHoverCell = null;
-            }
-            else
-            {
-                // Optionally check if we're hovering a cell (for future hover effects)
-                if (((1 << hit.collider.gameObject.layer) & cellLayerMask.value) != 0)
-                {
-                    Ikso3DCell cell = hit.collider.GetComponentInParent<Ikso3DCell>();
-                    currentHoverCell = cell;
-                    lastColliderName = hit.collider.name;
-                }
-                else
-                {
-                    currentHoverCell = null;
-                    lastColliderName = "non-cell";
-                }
-            }
-        }
-        else
-        {
-            currentHoverCell = null;
-            lastColliderName = "none";
         }
 
-        // Line renderer visuals (VR only)
         if (lineRenderer != null)
         {
             lineRenderer.enabled = true;
-            lineRenderer.startColor = beamColor;
-            lineRenderer.endColor = beamColor;
-            lineRenderer.SetPosition(0, rayOrigin.position);
+            lineRenderer.SetPosition(0, origin);
             lineRenderer.SetPosition(1, endPoint);
         }
     }
@@ -120,74 +91,63 @@ public class Ikso3DLaserPointer : UdonSharpBehaviour
     public override void OnPickupUseDown()
     {
         VRCPlayerApi local = Networking.LocalPlayer;
-        if (pickup == null || local == null || pickup.currentPlayer != local)
+        if (local == null)
         {
-            return; // Not our Use press
+            return;
         }
 
-        // Decide ray origin + direction based on VR vs desktop/mobile
-        Vector3 rayStart;
-        Vector3 rayDir;
-
-        if (local.IsUserInVR())
+        if (pickup != null && pickup.currentPlayer != local)
         {
-            rayStart = rayOrigin.position;
-            rayDir   = rayOrigin.forward;
+            return;
+        }
+
+        // Decide ray origin/direction based on VR vs desktop/mobile
+        Vector3 origin;
+        Vector3 dir;
+
+        if (local.IsUserInVR() && rayOrigin != null)
+        {
+            origin = rayOrigin.position;
+            dir = rayOrigin.forward;
         }
         else
         {
             // Desktop / Mobile: use head/reticle
-            var head = local.GetTrackingData(VRCPlayerApi.TrackingDataType.Head);
-            rayStart = head.position;
-            rayDir   = head.rotation * Vector3.forward;
+            VRCPlayerApi.TrackingData head = local.GetTrackingData(VRCPlayerApi.TrackingDataType.Head);
+            origin = head.position;
+            dir = head.rotation * Vector3.forward;
         }
 
-        Ray ray = new Ray(rayStart, rayDir);
+        Ray ray = new Ray(origin, dir);
         RaycastHit hit;
 
-        // STEP 1: does the ray hit the tablet first?
-        bool hitUI = Physics.Raycast(
-            ray,
-            out hit,
-            maxDistance,
-            ~0,
-            QueryTriggerInteraction.Collide
-        );
-
-        if (hitUI && tabletRoot != null && hit.collider.transform.IsChildOf(tabletRoot))
+        // STEP 1: check if we hit the tablet first (all layers)
+        if (Physics.Raycast(ray, out hit, maxDistance, ~0, QueryTriggerInteraction.Collide))
         {
-            // We aimed at the tablet: let the tablet handle it, do NOT click cells
-            lastColliderName = "tablet:" + hit.collider.name;
-            Debug.Log("Ikso3DLaserPointer click blocked by tablet: " + lastColliderName);
-            return;
+            if (tabletRoot != null)
+            {
+                Transform hitTransform = hit.collider != null ? hit.collider.transform : null;
+                if (hitTransform != null && hitTransform.IsChildOf(tabletRoot))
+                {
+                    // Hit tablet: do not interact with cells
+                    return;
+                }
+            }
         }
 
-        // STEP 2: raycast only against Ikso3D cells
-        bool hitCell = Physics.Raycast(
-            ray,
-            out hit,
-            maxDistance,
-            cellLayerMask,
-            QueryTriggerInteraction.Collide
-        );
-
-        if (!hitCell)
+        // STEP 2: raycast only against Ikso3D cell layer
+        if (Physics.Raycast(ray, out hit, maxDistance, cellLayerMask, QueryTriggerInteraction.Collide))
         {
-            lastColliderName = "no-cell-hit";
-            Debug.Log("Ikso3DLaserPointer clicked but hit no cell");
-            return;
-        }
+            if (hit.collider == null)
+            {
+                return;
+            }
 
-        Ikso3DCell cellHit = hit.collider.GetComponentInParent<Ikso3DCell>();
-        if (cellHit == null)
-        {
-            lastColliderName = "cellLayer-no-Ikso3DCell:" + hit.collider.name;
-            Debug.Log("Ikso3DLaserPointer clicked on collider without Ikso3DCell: " + lastColliderName);
-            return;
+            Ikso3DCell cell = hit.collider.GetComponentInParent<Ikso3DCell>();
+            if (cell != null)
+            {
+                cell.OnPointerClick(playerColorIndex);
+            }
         }
-
-        lastColliderName = hit.collider.name;
-        cellHit.OnPointerClick(playerColorIndex);
-        Debug.Log("Ikso3DLaserPointer clicked on collider: " + lastColliderName);
     }
 }

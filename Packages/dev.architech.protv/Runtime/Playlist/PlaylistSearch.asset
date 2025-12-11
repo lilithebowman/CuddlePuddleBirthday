@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: PlaylistSearch
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: e2a6542982e7533469f173b30cfa935f,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 6b8de4d1cfc5429459a731e31e0c997f,
     type: 2}
   udonAssembly: 
   assemblyError: 

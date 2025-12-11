@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: MediaControls
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 63c09afeb2a22734fbb7808a89444314,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 00647497c5ce34b44a5254ec4ff68370,
     type: 2}
   udonAssembly: 
   assemblyError: 

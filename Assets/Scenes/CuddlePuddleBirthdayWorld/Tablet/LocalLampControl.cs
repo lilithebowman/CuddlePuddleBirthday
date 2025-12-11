@@ -11,6 +11,7 @@ public class LocalLampControl : UdonSharpBehaviour
 
     private bool _initialized;
     private float[] _baseIntensities;
+    private float _lastSliderValue = -1f;
 
     private void Start()
     {
@@ -25,17 +26,29 @@ public class LocalLampControl : UdonSharpBehaviour
 
         _initialized = true;
 
-        // Optional: apply initial slider value at start
         if (slider != null)
         {
-            OnSliderChanged(slider.value);
+            _lastSliderValue = slider.value;
+            ApplySliderValue(_lastSliderValue);
         }
     }
 
-    // This is called from the Slider's OnValueChanged event in the Inspector
-    public void OnSliderChanged(float value)
+    private void Update()
     {
-        if (!_initialized || lamps == null) return;
+        if (!_initialized || slider == null) return;
+
+        float v = slider.value;
+        // Only react when it actually changes
+        if (Mathf.Abs(v - _lastSliderValue) > 0.0001f)
+        {
+            _lastSliderValue = v;
+            ApplySliderValue(v);
+        }
+    }
+
+    private void ApplySliderValue(float value)
+    {
+        if (lamps == null) return;
 
         for (int i = 0; i < lamps.Length; i++)
         {
@@ -56,5 +69,11 @@ public class LocalLampControl : UdonSharpBehaviour
                 l.intensity = Mathf.Lerp(0f, baseIntensity, value);
             }
         }
+    }
+
+    // Keeping this in case you ever want to call it manually
+    public void OnSliderChanged(float value)
+    {
+        ApplySliderValue(value);
     }
 }

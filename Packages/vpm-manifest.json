@@ -23,6 +23,9 @@
     },
     "dev.architech.protv.extras": {
       "version": "0.9.3-beta"
+    },
+    "jp.lilxyzw.lilpbr": {
+      "version": "1.0.0"
     }
   },
   "locked": {
@@ -75,6 +78,10 @@
       "dependencies": {
         "dev.architech.protv": ">=3.0.0-beta.24.1"
       }
+    },
+    "jp.lilxyzw.lilpbr": {
+      "version": "1.0.0",
+      "dependencies": {}
     }
   }
 }

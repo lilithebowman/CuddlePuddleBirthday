@@ -1,0 +1,351 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja-JP\n"
+
+
+
+#: Common
+
+msgid "Rendering Mode"
+msgstr "描画モード"
+
+msgid "Opaque"
+msgstr "不透明"
+
+msgid "Cutout"
+msgstr "カットアウト"
+
+msgid "Dither"
+msgstr "ディザ"
+
+msgid "Transparent"
+msgstr "透明"
+
+msgid "Cutoff"
+msgstr "カットオフ"
+
+msgid "Cull"
+msgstr "Cull"
+
+msgid "Dither Randomize"
+msgstr "ディザランダマイズ"
+
+msgid "Strength"
+msgstr "強度"
+
+
+
+#: Base
+
+msgid "Base"
+msgstr "ベース"
+
+msgid "Color"
+msgstr "色"
+
+msgid "Albedo"
+msgstr "アルベド"
+
+msgid "Vertex Color Mode"
+msgstr "頂点カラーモード"
+
+msgid "UV Mode"
+msgstr "UVモード"
+
+msgid "UV Randomize"
+msgstr "UVランダマイズ"
+
+msgid "Normal Map"
+msgstr "ノーマルマップ"
+
+msgid "Backface Override"
+msgstr "裏面の色"
+
+
+
+#: PBR
+
+msgid "PBR"
+msgstr "PBR"
+
+msgid "Texture Mode"
+msgstr "テクスチャモード"
+
+msgid "PBR Map"
+msgstr "PBRマップ"
+
+msgid "Metallic"
+msgstr "メタリック"
+
+msgid "Occlusion"
+msgstr "オクルージョン"
+
+msgid "Height"
+msgstr "ハイト"
+
+msgid "Smoothness"
+msgstr "スムースネス"
+
+msgid "Displacement Mode"
+msgstr "ディスプレースメントモード"
+
+msgid "Displacement Quality"
+msgstr "ディスプレースメントクオリティ"
+
+msgid "Displacement Randomize"
+msgstr "ディスプレースメントランダマイズ"
+
+msgid "Reflectance"
+msgstr "反射率"
+
+msgid "GSAA"
+msgstr "GSAA"
+
+msgid "Bent Normal Map"
+msgstr "ベントノーマルマップ"
+
+
+
+#: Emission
+
+msgid "Emission"
+msgstr "エミッション"
+
+msgid "Subpixel Pattern"
+msgstr "サブピクセルパターン"
+
+
+
+#: Anisotropy
+
+msgid "Anisotropy Direction"
+msgstr "Anisotropy Direction"
+
+msgid "Anisotropy"
+msgstr "異方性"
+
+
+
+#: Clear Coat
+
+msgid "Clear Coat"
+msgstr "クリアコート"
+
+msgid "Clear Coat Map"
+msgstr "クリアコートマップ"
+
+msgid "Base Normal Map"
+msgstr "ベースノーマルマップ"
+
+
+
+#: Cloth
+
+msgid "Cloth"
+msgstr "クロース"
+
+msgid "Albedo Blend"
+msgstr "アルベドブレンド"
+
+msgid "Fuzz"
+msgstr "毛羽立ち"
+
+msgid "Dark"
+msgstr "暗くする"
+
+
+
+#: Fake Translucent
+
+msgid "Fake Translucent"
+msgstr "疑似透過"
+
+msgid "Translucent"
+msgstr "透過"
+
+msgid "Roughness"
+msgstr "ラフネス"
+
+msgid "Roughness Blend"
+msgstr "ラフネスブレンド"
+
+
+
+#: Subsurface Scattering
+
+msgid "Subsurface Scattering"
+msgstr "サブサーフェス・スキャタリング"
+
+msgid "Channel"
+msgstr "チャンネル"
+
+msgid "Thickness"
+msgstr "厚み"
+
+msgid "Rim"
+msgstr "リム"
+
+
+
+#: Screening
+
+msgid "Screening"
+msgstr "スクリーニング"
+
+msgid "Screening Mode"
+msgstr "スクリーニングモード"
+
+msgid "Scale X"
+msgstr "スケール (X)"
+
+msgid "Scale Y"
+msgstr "スケール (Y)"
+
+msgid "Noise"
+msgstr "ノイズ"
+
+
+
+#: Details
+
+msgid "Details"
+msgstr "ディテール"
+
+msgid "Detail Mask (RGBA)"
+msgstr "ディテールマスク (RGBA)"
+
+msgid "Detail"
+msgstr "ディテール"
+
+msgid "Detail 1"
+msgstr "ディテール1"
+
+msgid "Detail 2"
+msgstr "ディテール2"
+
+msgid "Detail 3"
+msgstr "ディテール3"
+
+msgid "Detail 4"
+msgstr "ディテール4"
+
+msgid "Normal Map Blend"
+msgstr "ノーマルマップブレンド"
+
+msgid "Projection"
+msgstr "プロジェクション"
+
+msgid "Projection Sharpness"
+msgstr "プロジェクションシャープネス"
+
+msgid "Projection Threshold"
+msgstr "プロジェクション閾値"
+
+
+
+#: Wetness
+
+msgid "Wetness"
+msgstr "ウェットネス"
+
+msgid "Wetness Mode"
+msgstr "ウェットネスモード"
+
+msgid "Mask"
+msgstr "マスク"
+
+msgid "Normal Scroll"
+msgstr "ノーマルマップスクロール"
+
+msgid "Depth"
+msgstr "深さ"
+
+msgid "Rain Scale"
+msgstr "雨のサイズ"
+
+msgid "Rain Speed"
+msgstr "雨の速度"
+
+msgid "Rain Loop"
+msgstr "雨のループ数"
+
+
+
+#: Tessellation
+
+msgid "Tessellation"
+msgstr "テッセレーション"
+
+msgid "Edge"
+msgstr "辺の長さ"
+
+msgid "Maximum Division"
+msgstr "最大分割数"
+
+msgid "Shrink"
+msgstr "縮小"
+
+msgid "Smoothing"
+msgstr "平滑化"
+
+
+
+#: Wind
+
+msgid "Wind"
+msgstr "風"
+
+msgid "Wind Mode"
+msgstr "風モード"
+
+msgid "Direction"
+msgstr "向き"
+
+msgid "Mask Mode"
+msgstr "マスクモード"
+
+msgid "Branch Softness"
+msgstr "枝の柔らかさ"
+
+msgid "Leaf Softness"
+msgstr "葉の柔らかさ"
+
+
+
+#: Distance Fade
+
+msgid "Distance Fade"
+msgstr "距離フェード"
+
+msgid "Start Distance"
+msgstr "開始距離"
+
+msgid "End Distance"
+msgstr "終了距離"
+
+
+
+#: Advanced
+
+msgid "Advanced"
+msgstr "拡張設定"
+
+
+
+#: Water
+
+msgid "Water"
+msgstr "水"
+
+msgid "Foam"
+msgstr "泡"
+
+msgid "Fog"
+msgstr "フォグ"
+
+msgid "Distance"
+msgstr "距離"
+

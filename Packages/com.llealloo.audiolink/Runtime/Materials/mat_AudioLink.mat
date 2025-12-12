@@ -35,7 +35,7 @@ Material:
     - _MediaPlaying: 1
     - _MediaTime: 0
     - _MediaVolume: 0.5
-    - _SourceDistance: 9999998
+    - _SourceDistance: 10000008
     - _SourceSpatialBlend: 0
     - _SourceVolume: 0.01
     - _ThemeColorMode: 0

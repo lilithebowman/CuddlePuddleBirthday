@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Ikso3DPointerRespawnButton
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 2486bbcf9553ad6449099e48d04b51b2,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: f35b69fb6a36f994cba88ab4284e703d,
     type: 2}
   udonAssembly: 
   assemblyError: 

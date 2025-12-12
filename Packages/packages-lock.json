@@ -277,6 +277,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "jp.lilxyzw.lilpbr": {
+      "version": "file:jp.lilxyzw.lilpbr",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

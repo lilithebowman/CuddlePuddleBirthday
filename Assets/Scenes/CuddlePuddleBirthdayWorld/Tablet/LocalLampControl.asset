@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: LocalLampControl
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 9e69102590634324a9f49a9e6a9b4e13,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 0ef99e90c252871458d5fe2e28e83c90,
     type: 2}
   udonAssembly: 
   assemblyError: 

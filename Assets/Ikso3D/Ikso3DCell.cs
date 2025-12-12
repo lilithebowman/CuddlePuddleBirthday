@@ -1,4 +1,4 @@
-﻿using UdonSharp;
+using UdonSharp;
 using UnityEngine;
 using VRC.Udon;
 
@@ -7,12 +7,13 @@ public class Ikso3DCell : UdonSharpBehaviour
     public Ikso3DBoard board;
     public int cellIndex;
 
-    // Called by a pointer when it hits + clicks this cell
     public void OnPointerClick(int playerColorIndex)
     {
-        if (board != null)
+        if (board == null)
         {
-            board.ClickCell(cellIndex, playerColorIndex);
+            return;
         }
+
+        board.ClickCell(cellIndex, playerColorIndex);
     }
 }

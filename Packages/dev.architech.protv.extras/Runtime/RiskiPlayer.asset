@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: RiskiPlayer
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 543187c2780ad654da0f7c65d5167876,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 76a8a7399e4a17544aae68e21dbd3ef0,
     type: 2}
   udonAssembly: 
   assemblyError: 

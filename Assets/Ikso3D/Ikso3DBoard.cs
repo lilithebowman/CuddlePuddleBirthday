@@ -1,103 +1,204 @@
-﻿using UdonSharp;
+using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
 
 public class Ikso3DBoard : UdonSharpBehaviour
 {
-    [Header("Cell renderers in index order 0..26")]
-    public Renderer[] cellRenderers;   // drag I3DP0..26 here
+    [Header("Cells")]
+    public Renderer[] cellRenderers;      // 27 renderers, index 0..26
 
     [Header("Materials")]
-    public Material matBlankSphere;    // transparent
-    public Material[] playerMaterials; // size 9: Red..Pink (0..8)
+    public Material matBlankSphere;       // transparent / empty
+    public Material[] playerMaterials;    // 9 materials, 0..8
 
-    // -1 = empty, 0..8 = player color index
-    [UdonSynced] private int[] cellColors = new int[27];
+    [UdonSynced] private int[] cellColors = new int[27]; // -1 = empty, 0..8 = player color
+
+    private const int EMPTY = -1;
 
     private void Start()
     {
-        // Ensure initial state is empty when world loads
-        for (int i = 0; i < cellColors.Length; i++)
+        // Ensure array matches renderer count
+        if (cellRenderers == null)
         {
-            if (cellColors[i] == 0 && cellRenderers[i].sharedMaterial == null)
+            return;
+        }
+
+        int cellCount = cellRenderers.Length;
+
+        if (cellColors == null || cellColors.Length != cellCount)
+        {
+            cellColors = new int[cellCount];
+        }
+
+        // If we are the owner and everything is still default 0,
+        // treat this as uninitialized and set to EMPTY, then sync.
+        VRCPlayerApi local = Networking.LocalPlayer;
+        if (local != null && Networking.IsOwner(gameObject))
+        {
+            bool allZero = true;
+            for (int i = 0; i < cellColors.Length; i++)
             {
-                // First load case, force empty
-                cellColors[i] = -1;
+                if (cellColors[i] != 0)
+                {
+                    allZero = false;
+                    break;
+                }
             }
 
-            if (cellColors[i] == -1)
+            if (allZero)
             {
-                ApplyCellVisual(i);
+                for (int i = 0; i < cellColors.Length; i++)
+                {
+                    cellColors[i] = EMPTY;
+                }
+                RequestSerialization();
             }
         }
+
+        // Apply visuals based on current cellColors
+        ApplyAllCellVisuals();
     }
 
     public override void OnDeserialization()
     {
-        // When network sync updates, redraw everything
-        for (int i = 0; i < cellColors.Length; i++)
-        {
-            ApplyCellVisual(i);
-        }
+        // When network data arrives, redraw based on synced cellColors
+        ApplyAllCellVisuals();
     }
 
-    // Called by pointers when they click a cell
     public void ClickCell(int cellIndex, int playerColorIndex)
     {
-        if (cellIndex < 0 || cellIndex >= cellColors.Length) return;
-        if (playerColorIndex < 0 || playerColorIndex >= playerMaterials.Length) return;
-
-        int current = cellColors[cellIndex];
-
-        // If empty -> claim it
-        if (current == -1)
+        if (cellRenderers == null || cellColors == null)
         {
-            cellColors[cellIndex] = playerColorIndex;
-        }
-        // If already mine -> clear it
-        else if (current == playerColorIndex)
-        {
-            cellColors[cellIndex] = -1;
-        }
-        else
-        {
-            // Someone else's piece: do nothing
             return;
         }
 
+        if (cellIndex < 0 || cellIndex >= cellColors.Length)
+        {
+            return;
+        }
+
+        if (playerColorIndex < 0 || playerMaterials == null || playerColorIndex >= playerMaterials.Length)
+        {
+            return;
+        }
+
+        VRCPlayerApi local = Networking.LocalPlayer;
+        if (local == null)
+        {
+            return;
+        }
+
+        // Take ownership of the board so our changes replicate
+        if (!Networking.IsOwner(gameObject))
+        {
+            Networking.SetOwner(local, gameObject);
+        }
+
+        int current = cellColors[cellIndex];
+        int newValue = current;
+
+        // Rules:
+        // EMPTY        -> becomes this pointer's color
+        // own color    -> becomes EMPTY
+        // other color  -> no-op (can't overwrite)
+        if (current == EMPTY)
+        {
+            newValue = playerColorIndex;
+        }
+        else if (current == playerColorIndex)
+        {
+            newValue = EMPTY;
+        }
+        else
+        {
+            // Do nothing if trying to overwrite someone else's color
+            return;
+        }
+
+        if (newValue == current)
+        {
+            return;
+        }
+
+        cellColors[cellIndex] = newValue;
         ApplyCellVisual(cellIndex);
+
         RequestSerialization();
     }
 
     public void ResetBoard()
     {
+        if (cellRenderers == null)
+        {
+            return;
+        }
+
+        int cellCount = cellRenderers.Length;
+
+        if (cellColors == null || cellColors.Length != cellCount)
+        {
+            cellColors = new int[cellCount];
+        }
+
+        VRCPlayerApi local = Networking.LocalPlayer;
+        if (local != null && !Networking.IsOwner(gameObject))
+        {
+            Networking.SetOwner(local, gameObject);
+        }
+
         for (int i = 0; i < cellColors.Length; i++)
         {
-            cellColors[i] = -1;
-            ApplyCellVisual(i);
+            cellColors[i] = EMPTY;
         }
+
+        ApplyAllCellVisuals();
 
         RequestSerialization();
     }
 
+    private void ApplyAllCellVisuals()
+    {
+        if (cellRenderers == null || cellColors == null)
+        {
+            return;
+        }
+
+        int len = Mathf.Min(cellRenderers.Length, cellColors.Length);
+        for (int i = 0; i < len; i++)
+        {
+            ApplyCellVisual(i);
+        }
+    }
+
     private void ApplyCellVisual(int index)
     {
+        if (cellRenderers == null || index < 0 || index >= cellRenderers.Length)
+        {
+            return;
+        }
+
         Renderer r = cellRenderers[index];
-        if (r == null) return;
+        if (r == null)
+        {
+            return;
+        }
 
         int colorIndex = cellColors[index];
 
-        if (colorIndex == -1)
+        if (colorIndex == EMPTY)
         {
-            r.sharedMaterial = matBlankSphere;
-        }
-        else
-        {
-            if (colorIndex >= 0 && colorIndex < playerMaterials.Length)
+            if (matBlankSphere != null)
             {
-                r.sharedMaterial = playerMaterials[colorIndex];
+                r.sharedMaterial = matBlankSphere;
             }
+        }
+        else if (playerMaterials != null &&
+                 colorIndex >= 0 &&
+                 colorIndex < playerMaterials.Length &&
+                 playerMaterials[colorIndex] != null)
+        {
+            r.sharedMaterial = playerMaterials[colorIndex];
         }
     }
 }

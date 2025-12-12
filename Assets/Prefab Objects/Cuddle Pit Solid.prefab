@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8362191676772944323
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: bcc2dc0481c73f543ae1e35d06a90a8a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.41
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bcc2dc0481c73f543ae1e35d06a90a8a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bcc2dc0481c73f543ae1e35d06a90a8a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.62
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bcc2dc0481c73f543ae1e35d06a90a8a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9988348
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bcc2dc0481c73f543ae1e35d06a90a8a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.048261035
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bcc2dc0481c73f543ae1e35d06a90a8a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1.0716115e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bcc2dc0481c73f543ae1e35d06a90a8a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -2.9353749e-24
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bcc2dc0481c73f543ae1e35d06a90a8a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bcc2dc0481c73f543ae1e35d06a90a8a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bcc2dc0481c73f543ae1e35d06a90a8a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bcc2dc0481c73f543ae1e35d06a90a8a,
+        type: 3}
+      propertyPath: m_Name
+      value: Cuddle Pit Solid
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bcc2dc0481c73f543ae1e35d06a90a8a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: bcc2dc0481c73f543ae1e35d06a90a8a,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: b2f14eb81d2fbb242a8202a52193c222,
+        type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bcc2dc0481c73f543ae1e35d06a90a8a, type: 3}

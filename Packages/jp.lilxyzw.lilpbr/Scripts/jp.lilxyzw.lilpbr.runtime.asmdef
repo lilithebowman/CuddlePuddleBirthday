@@ -1,0 +1,20 @@
+{
+    "name": "jp.lilxyzw.lilpbr.runtime",
+    "rootNamespace": "jp.lilxyzw.lilpbr.runtime",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.vrchat.base",
+            "expression": "",
+            "define": "LIL_VRCHAT"
+        }
+    ],
+    "noEngineReferences": false
+}

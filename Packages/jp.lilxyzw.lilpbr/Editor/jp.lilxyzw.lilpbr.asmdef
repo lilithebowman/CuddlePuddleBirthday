@@ -1,0 +1,34 @@
+{
+    "name": "jp.lilxyzw.lilpbr",
+    "rootNamespace": "jp.lilxyzw.lilpbr",
+    "references": [
+        "jp.lilxyzw.lilpbr.runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.vrchat.base",
+            "expression": "",
+            "define": "LIL_VRCHAT"
+        },
+        {
+            "name": "red.sim.lightvolumes",
+            "expression": "",
+            "define": "LIL_VRCLIGHTVOLUMES"
+        },
+        {
+            "name": "at.pimaker.ltcgi",
+            "expression": "",
+            "define": "LIL_LTCGI"
+        }
+    ],
+    "noEngineReferences": false
+}
